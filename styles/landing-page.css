@@ -10,7 +10,7 @@
 			line-height: 26px;
 			font-family: 'Montserrat', sans-serif;
 			background: url(/assets/images/portfolio_bg.png);
-			color:#EDE9E8;
+			background-color: #a87641;
 		}
 		html,body {
 			scroll-behavior: smooth;
@@ -256,7 +256,7 @@
 		/* Footer */
 
 		div.bottom {
-			background:#430a0a;
+			background: #573b1f;
 			
 		}
 		div.bottom .copyright {
@@ -282,7 +282,7 @@
 		top: 0;
 		height: 70px;
 		padding: 0 1.5em;
-		background-color: #5c0202;
+		background-color: #f4f4f4;
 		font-family: 'Montserrat', sans-serif;
 		}
 		nav .logo {
@@ -314,11 +314,13 @@
 			display: inline-block;
 			padding: 0 1.5em;
 			line-height: 70px;
-			color: #EDE9E8;
+			color: #573b1f;
 			text-decoration: none;
+			font-weight: bold;
+			
 		}
 		nav .nav-item a:hover{
-			color:#2d0505;
+			color:#d89718;
 		}
 		nav .nav-item-profile a:active{
 			color:#470d0d;
@@ -362,9 +364,9 @@
 			top: 100%;
 			padding: .5em 0;
 			margin-top: -.5em;
-			border: 1px solid rgba(0,0,0,.3);
+			border: 1px solid #573b1fbb;
 			border-radius: .5em;
-			background-color: #EDE9E8;
+			background-color: #f4f4f4;
 		}
 		nav .dropdown-menu-profile {
 		width: 120px;
@@ -380,19 +382,19 @@
 		background-color: #EDE9E8;
 		}
 		nav .dropdown.show .dropdown-menu {
-			background-color:#0e2c40;
+			background-color:#573b1f;
 			display: block;
 		}
 		nav .dropdown-profile.show .dropdown-menu-profile {
-			background-color:#0e2c40;
+			background-color:#573b1f;
 			display: block;
 		}
 		nav .dropdown-item:hover{
-			background-color:#0e2c40;
+			background-color:#573b1f;
 			color: #EDE9E8;
 		}
 		nav .dropdown-item-profile:hover{
-			background-color:#0e2c40;
+			background-color:#573b1f;
 			color: #FFDF00;
 		}
 		nav .dropdown-item {
@@ -400,7 +402,7 @@
 			padding: 0 1.5em;
 			font-size: .875em;
 
-			color:#EDE9E8;
+			color:#573b1f;
 			line-height: 3;
 			text-decoration: none;
 		}
