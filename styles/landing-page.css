@@ -9,7 +9,7 @@
 			font-size: 18px;
 			line-height: 26px;
 			font-family: 'Montserrat', sans-serif;
-			background: url(/static/images/portfolio_bg.png);
+			background: url(/assets/images/portfolio_bg.png);
 			color:#EDE9E8;
 		}
 		html,body {
@@ -99,7 +99,7 @@
 		}
 
 		div.menu ul li a:hover, div.menu ul li{
-			color: #ffd700;
+			color: #360606;
 		}
 
 		.login_container{
@@ -256,7 +256,7 @@
 		/* Footer */
 
 		div.bottom {
-			background: #0e2c40;
+			background:#430a0a;
 			
 		}
 		div.bottom .copyright {
@@ -282,7 +282,7 @@
 		top: 0;
 		height: 70px;
 		padding: 0 1.5em;
-		background-color: #0e2c40;
+		background-color: #5c0202;
 		font-family: 'Montserrat', sans-serif;
 		}
 		nav .logo {
@@ -318,10 +318,10 @@
 			text-decoration: none;
 		}
 		nav .nav-item a:hover{
-			color:#FFDF00;
+			color:#2d0505;
 		}
 		nav .nav-item-profile a:active{
-			color:#FFDF00;
+			color:#470d0d;
 		}
 		nav .dropdown {
 			position: relative;
@@ -533,7 +533,7 @@
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		background-image:url(/static/images/contactbg-cityscape.jpg);
+		background-image:url(/assets/images/contactbg-cityscape.jpg);
 		background-size: cover;
 
 	}
@@ -696,7 +696,7 @@
 	content: "\f106";
 	background-color:#ffd700;
 	padding: 10px 15px;
-	color:#0e2c40;
+	color:#5c0202;
 	position: absolute; 
 	bottom:10px;
 	font-size: 28px;
