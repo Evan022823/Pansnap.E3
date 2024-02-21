@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Pansnap Studio</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+		<link rel="icon" href="/static/yellow-cam.png" type="image/x-icon">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<!-- CSS -->
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+        <link rel="stylesheet" href="./styles/landing-page.css">
+		<!-- Default theme -->
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+
+	</head>
+
+	
+<body>
+	
+	<div class="go-top">
+		
+	</div>
+    
+    <script>
+        $(function(){
+
+        //Scroll event
+        $(window).scroll(function(){
+        var scrolled = $(window).scrollTop();
+        if (scrolled > 200) $('.go-top').fadeIn('slow');
+        if (scrolled < 200) $('.go-top').fadeOut('slow');
+        });
+
+        //Click event
+        $('.go-top').click(function () {
+        $("html, body").animate({ scrollTop: "0" },  500);
+        });
+
+        });
+
+    </script>
+		<!--  -->
+	<div id="wrap">
+		<nav>
+			<div class="logo">
+				<a href="">
+					<img src="/assets/images/logo/pansnap_logo.png" 
+					
+					style="
+					width: 300px;
+					position: absolute;
+					left: -10px;
+					top: -50px;
+					padding: 0;
+					margin: 0;
+					">
+				</a>
+			</div>
+			<button type="button" class="btn-hamburger" data-action="nav-toggle">
+				<span> </span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+			
+				
+				<ul class="nav-menu">
+
+					
+				<li class="nav-item {% active_link 'home' 'active'%}"><a  href="./section-page/about.html" >Home</a></li>
+                
+                <li class="nav-item"><a href="{{about}}" class="{% if request.path == about %} active {% endif %}">About</a></li>
+				<li class="nav-item"><a href="{% url 'services'%}"class="{% if navbar == 'services'%} active {% endif %}">Services</a></li>
+				<li class="nav-item"><a href="{% url 'hire-us'%}"class="{% if navbar == 'hire-us'%} active {% endif %}">Hire-us</a></li>
+				<li class="nav-item dropdown">
+					<a href="#" data-action="dropdown-toggle">Portfolio</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="{% url 'portfolio'%}"class="{% if navbar == 'portfolio'%} active {% endif %}">Outdoor Photos</a>
+						<a class="dropdown-item" href="{% url 'studio-shoot'%}"class="{% if navbar == 'studio-shoot'%} active {% endif %}">Indoor Photos</a>
+						<a class="dropdown-item" href="{% url 'films' %}"class="{% if navbar == 'films'%} active {% endif %}">Films</a>
+					</div>
+				</li>
+	
+				<li class="nav-item"><a href="{% url 'contact'%}"class="{% if navbar == 'contact'%} active {% endif %}">Contact</a></li>
+				
+				<li class="nav-item" ><a  href="{% url 'notification'  %}"><span><i class='bx bxs-bell'></i></span> <span class="badge" style="color:white; background-color: red;"></span></a></li>
+
+				
+
+			
+			</ul>
+		</nav>
+       
+		
+		<!-- START LOADER HTML -->
+<div class="fullpage-loader">
+	<div class="fullpage-loader__logo">
+		<!-- this img tag pointing to an external image is here for an example of what not to do, read the page to understand why to use a base64 image -->
+<!-- 		<img src="https://cdn.shopify.com/s/files/1/0497/3073/files/logosmall_400x.png?v=1539650409" /> -->
+		<img src="/assets/images/logo/pansnap_logo.png" width="500"/>
+	</div>
+</div>
+<!-- END LOADER HTML -->
+<script>
+	const loaderEl = document.getElementsByClassName('fullpage-loader')[0];
+document.addEventListener('readystatechange', (event) => {
+	// const readyState = "interactive";
+	const readyState = "complete";
+    
+	if(document.readyState == readyState) {
+		// when document ready add lass to fadeout loader
+		loaderEl.classList.add('fullpage-loader--invisible');
+		
+		// when loader is invisible remove it from the DOM
+		setTimeout(()=>{
+			loaderEl.parentNode.removeChild(loaderEl);
+		}, 2000)
+	}
+});
+</script>
+	</body>
+
+	<script>
+		let dropdownProfile = document.querySelector("[data-action='dropdown-toggle-profile']");
+		let dropdown_profile = document.querySelector('.dropdown-profile');
+			
+		dropdownProfile.addEventListener('click', () => {
+				if (dropdown_profile.classList.contains('show')) {
+					dropdown_profile.classList.remove('show'); 
+	
+				}else{
+					dropdown_profile.classList.add('show');
+				}
+	
+			})
+	</script>
+	
+	<script>
+			let nav = document.querySelector('nav');
+			let dropdown = nav.querySelector('.dropdown');
+			let dropdownToggle = nav.querySelector("[data-action='dropdown-toggle']");
+			let navToggle = nav.querySelector("[data-action='nav-toggle']");
+
+			dropdownToggle.addEventListener('click', () => {
+				if (dropdown.classList.contains('show')) {
+					dropdown.classList.remove('show');
+				} else {
+					dropdown.classList.add('show');
+				}
+			})
+
+	
+			navToggle.addEventListener('click', () => {
+				if (nav.classList.contains('opened')) {
+					nav.classList.remove('opened');
+				} else {
+					nav.classList.add('opened');
+				}
+			})
+		</script>
+
+
+
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+// You can also pass an optional settings object
+// below listed default settings
+  AOS.init({
+    // Global settings:
+    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+    initClassName: 'aos-init', // class applied after initialization
+    animatedClassName: 'aos-animate', // class applied on animation
+    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+    
+
+    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+    offset: 120, // offset (in px) from the original trigger point
+    delay: 0, // values from 0 to 3000, with step 50ms
+    duration: 1000, // values from 0 to 3000, with step 50ms
+    easing: 'ease', // default easing for AOS animations
+    once: false, // whether animation should happen only once - while scrolling down
+    mirror: false, // whether elements should animate out while scrolling past them
+    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+  });
+</script>
+
+<!-- JavaScript  Alertify-->
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+
+
+<div class="bottom">
+	<div class ="copyright">
+		<p>Copyright &copy; 2022 Pansnap Studio</p>
+	</div>
+</div>
+</html>
+
+
+
+
