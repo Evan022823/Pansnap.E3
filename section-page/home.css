@@ -1,0 +1,157 @@
+
+	section{
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+
+	}
+	.contentBx{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+		height: 100%;
+
+
+	}
+	.imgBx {
+		position: relative;
+		width: 50%;
+		height: 100%;
+	}
+	.imgBx img{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.contentBx .formBx h2{
+		color: #00bcd4;
+		font-weight: 600;
+		font-size: 1.5rem;
+		margin-bottom: 20px;
+		display: inline-block;
+	}
+	.contentBx .formBx .inputBx{
+		margin-bottom: 20px;
+	}
+	.contentBx .formBx .inputBx span{
+		font-size: 16px;
+		margin-bottom: 5px;
+		display: inline-block;
+		color: #607db8;
+		font-weight: 300;
+		font-size: 16px;
+		letter-spacing: 1px;
+
+	}
+	.inputBx input{
+		width: 100%;
+		padding: 10px 20px ;
+		outline: none;
+		font-weight: 400;
+		border: 1px solid #607d8b;
+		font-size: px;
+		letter-spacing: 1px;
+		color: #607d8b;
+		background:transparent;
+		border-radius: 30px;
+	}
+	.inputBx input[type="submit"]{
+		width: 50%;
+		background: #00bcd4; 
+		color:#EDE9E8;
+		outline: none;
+		border: none;
+		font-weight: 500;
+		cursor: pointer;
+	}
+	.imgBx::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 50%;
+		background: rgb(0,49,74);
+		background: linear-gradient(0deg, rgba(0,49,74,1) 0%, rgba(0,105,133,1) 48%, rgba(0,165,204,1) 100%);
+		z-index: 1;
+		mix-blend-mode: screen;
+	}
+	@media (max-width:768px){
+		.imgBx{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+		}
+		.contentBx{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+
+		}
+		.contentBx .formBx{
+			width: 100%;
+			padding: 40px;
+			background: white;
+			margin: 50px;
+		}
+		.inputBx p{
+			color: black;
+
+		}
+		.inputBx input[type="submit"]{
+			width: 100%;
+		}
+		.login_container{
+			width: 100%;
+			margin: 0 auto;
+			display: block;
+		}
+		.sec {
+			width: 100%;
+		}
+		.login_img{
+			display: none;
+		}
+		.form-sign{
+			margin-top: -100px;
+		}
+		.content-contact{
+			margin-top: 200px;
+		}
+		.contactForm{
+			padding: 20px;
+			width: 120%;
+			position: relative;
+			margin-top: -50px;
+		}
+		.bottom{
+			margin-top: 500px;
+		}
+		.login_container{
+			margin-top: 50px;
+		}
+
+	}
+	@media (max-width:375px){
+		.form-sign{
+			margin-top: -400px;
+		}
+		.content-home{
+			margin-bottom: 150px;
+		}
+
+	}
+
+	
