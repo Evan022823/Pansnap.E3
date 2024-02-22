@@ -9,32 +9,32 @@
 			font-size: 18px;
 			line-height: 26px;
 			font-family: 'Montserrat', sans-serif;
-			background: url(/assets/images/bg-home.png);
-			background-color: #a87641;
+			/* background: url(/assets/images/bg-home.png); */
+			background-color: #ffffff;
 		}
 		html,body {
 			scroll-behavior: smooth;
 		}
 	
-				/* scrollbarrr*/
-				/* width */
+		/* scrollbarrr*/
+			/* width */
 		::-webkit-scrollbar {
-		width: 20px;
+		width: 15px;
 		}
 
 		/* Track */
 		::-webkit-scrollbar-track {
-		box-shadow: inset 0 0 5px grey; 
+		/* box-shadow: inset 0 0 5px grey;  */
 		}
 		
 		/* Handle */
 		::-webkit-scrollbar-thumb {
-		background:#38b6ff; 
+		background:#A87641; 
 		}
 
 		/* Handle on hover */
 		::-webkit-scrollbar-thumb:hover {
-		background:#00bcd4; 
+		background:#a48e64; 
 		}
 
 		
@@ -42,8 +42,28 @@
 			font-family: 'Rubik', sans-serif;
 		}
 		h2{
-			color:#FFDF00;
+			color:#A87641;
 			font-family: 'Rubik', sans-serif;
+			font-size: 40px;
+		}
+
+		h4{
+			color:#A87641;
+			font-family: 'Rubik', sans-serif;
+			font-size: 70px;
+			font-family: 'Montserrat', sans-serif;
+		}
+
+
+		div .tagline {
+			width: 90%;
+			height: 250px;
+			margin-top: 200px;
+			display: flex;
+			justify-content: center;
+			padding-left: 40px;
+		
+
 		}
 		a{
 			text-decoration: none;
@@ -106,9 +126,11 @@
 			margin-top: 150px;
 			margin-left: 50px;
 			position: relative;
-			width: 100%;
+			width: 70%;
 			height: 100vh;
 			display: flex;
+			justify-content: center;
+			margin: auto;
 
 		}
 
@@ -125,8 +147,8 @@
 			width: 500px;
 			height: 600px;
 			opacity: 50%;
-			background: rgb(0,49,74);
-			background: linear-gradient(0deg, rgba(0,49,74,1) 0%, rgba(0,105,133,1) 48%, rgba(0,165,204,1) 100%);
+			
+			
 		}
 		section .login_img img{
 			position: absolute;
@@ -151,7 +173,7 @@
 		}
 
 		section .login_content .loginform h2 {
-			color: #006eff;
+			color: #573b1f;
 			text-transform: uppercase;
 			font-weight: 600px;
 			font-size: 1.5em;
@@ -167,11 +189,11 @@
 		section .login_content .loginform .login_input p {
 			width: 100%;
 			font-size: 16px;
-			color:#EDE9E8;
+			color:#d89718;
 		}
 
 		section .login_content .loginform .login_input p a {
-			color: #004aad;
+			color: #a87641;
 			text-decoration: underline;
 		}
 
@@ -180,7 +202,7 @@
 			font-size: 16px;
 			margin-bottom: 5px;
 			display: inline-block;
-			color:#EDE9E8;
+			color:#573b1f;
 			font-weight: 300;
 			font-size: 16px;
 			letter-spacing: 1px;
@@ -191,18 +213,18 @@
 			padding: 10px 20px;
 			outline: none;
 			font-weight: 400;
-			border: 1px solid #38b6ff;
+			border: 1px solid #a87641;
 			font-size: 16px;
 			letter-spacing: 1px;
-			color:#EDE9E8;
+			color:#3b3835;
 			background: transparent;
 			border-radius: 30px;
 		}
 
 		section .login_content .loginform .login_input input[type="submit"]{
 			width: 50%;
-			background: #006eff; 
-			color:#EDE9E8;
+			background: #d89718; 
+			color:#ffffff;
 
 			outline: none;
 			border: none;
@@ -211,7 +233,7 @@
 		}
 
 		section .login_content .loginform .login_input input[type="submit"]:hover {
-			background: #004aad;
+			background: #a87641;
 	
 		}
 
@@ -282,7 +304,7 @@
 		top: 0;
 		height: 70px;
 		padding: 0 1.5em;
-		background-color: #f4f4f4;
+		background-color: #573b1f;
 		font-family: 'Montserrat', sans-serif;
 		}
 		nav .logo {
@@ -314,7 +336,7 @@
 			display: inline-block;
 			padding: 0 1.5em;
 			line-height: 70px;
-			color: #573b1f;
+			color: #fff6e5;
 			text-decoration: none;
 			font-weight: bold;
 			
@@ -499,6 +521,7 @@
 			margin-top: 50px;
 			padding: 5%;
 			min-height: 100%;
+			
 		}
 
 @media only screen and (max-width: 600px) {
@@ -549,12 +572,12 @@
 	}
 	.content-contact h2{
 		font-weight: 500;
-		color: #ffd700;
+		color: #a87641;
 	}
 	.content-contact p{
 		font-size: 20px;
 		font-weight: 500;
-		color:white;
+		color: #4d4b4a;
 
 
 	}
@@ -583,27 +606,27 @@
 		justify-content: center;
 		align-items: center;
 		border-radius: 50%;
-		font-size: 22px;
-		color: #00bcd4;
+		font-size: 25px;
+		color: #573b1f;
 	}
 	.text{
 		display: flex;
 		margin-left: 20px;
 		font-size: 16px;
-		color: #ffff;
+		color: #635f5f;
 		flex-direction: column;
 		font-weight: 300;
 	}
 	.text h3{
 		font-weight: 500;
-		color: #00bcd4;
+		color: #81776d;
 
 	}
 	.contactForm{
 		border-radius: 30px;
 		width: 40%;
 		padding: 40px;
-		background:#ffff;
+		background:#ffffff;
 
 	}
 	.contactForm h2{
@@ -642,13 +665,13 @@
 	.inputBox textarea:focus ~ span,
 	.inputBox textarea:valid ~ span
 	{
-		color: #00bcd4;
+		color: #a87641;
 		font-size: 12px;
 		transform: translateY(-20px);
 	}
 	.contactForm .inputBox input[type="submit"]{
 		width: 150px;
-		background: #00bcd4;
+		background: #a87641;
 		color: #fff;
 		border: none;
 		cursor: pointer;
@@ -658,6 +681,10 @@
 		margin-left: 100px;
 
 	}
+	
+		
+
+
 	@media (max-width:991px){
 		.contact{
 			padding: 50px;
@@ -699,7 +726,7 @@
 	.go-top:after {
 	font-family: FontAwesome;
 	content: "\f106";
-	background-color:#ffd700;
+	background-color:#fff6e5;
 	padding: 10px 15px;
 	color:#5c0202;
 	position: absolute; 
@@ -794,6 +821,7 @@
 .fullpage-loader--invisible {
   opacity: 0;
 }
+
 
 /* END LOADER CSS */
 

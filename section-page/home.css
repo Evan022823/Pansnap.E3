@@ -113,10 +113,10 @@
 		.inputBx input[type="submit"]{
 			width: 100%;
 		}
-		.login_container{
+		/* .login_container{
 			width: 100%;
 			margin: 0 auto;
-			display: block;
+			display: block; */
 		}
 		.sec {
 			width: 100%;
