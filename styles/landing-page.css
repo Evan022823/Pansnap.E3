@@ -9,7 +9,7 @@
 			font-size: 18px;
 			line-height: 26px;
 			font-family: 'Montserrat', sans-serif;
-			background: url(/assets/images/portfolio_bg.png);
+			background: url(/assets/images/bg-home.png);
 			background-color: #a87641;
 		}
 		html,body {
@@ -319,11 +319,12 @@
 			font-weight: bold;
 			
 		}
+		
 		nav .nav-item a:hover{
 			color:#d89718;
 		}
 		nav .nav-item-profile a:active{
-			color:#470d0d;
+			color:#b36423;
 		}
 		nav .dropdown {
 			position: relative;
@@ -336,7 +337,7 @@
 			display: inline-block;
 			margin-left: .5em;
 			vertical-align: middle;
-			border-top: .3em solid#EDE9E8;
+			border-top: .3em solid#edeae8;
 			border-right: .3em solid transparent;
 			border-left: .3em solid transparent;
 		}
@@ -402,7 +403,7 @@
 			padding: 0 1.5em;
 			font-size: .875em;
 
-			color:#573b1f;
+			color:#cec3b9;
 			line-height: 3;
 			text-decoration: none;
 		}

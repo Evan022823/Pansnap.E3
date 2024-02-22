@@ -11,9 +11,20 @@
 
 		.about-owner h2 {
 			position:absolute; 
-			margin-top: -50px; 
-			color: #ffff;
-		}
+			margin-top: 50px; 
+      margin-left: 50px;
+			color: #ffffff;
+      font-size: 50px;
+      font-family:'Montserrat', sans-serif;
+      
+    }
+
+    .about-owner h2 span {
+      font-family: "Dancing Script", cursive;
+      font-size: 70px;
+      color:rgb(243, 182, 102);
+    }
+
 
 		.about-owner .image-all {
 			width: 200px;
@@ -24,6 +35,8 @@
       background-color: #FFDF00;
 			
 		}
+
+   
 
 		.about-owner .image-all:hover {
 			transform: scale(1.05);
