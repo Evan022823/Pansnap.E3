@@ -475,6 +475,8 @@
 				transition: bottom .5s ease-in-out;
 				overflow: hidden;
 			}
+
+
 			nav.opened .nav-menu {
 				bottom: 0;
 			}
@@ -707,6 +709,7 @@
 	}
     .active {
         color: violet;
+	
     }
 
 	.notification {
