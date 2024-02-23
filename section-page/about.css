@@ -67,9 +67,11 @@
 		.owner-info td .image-all {
 			border-radius: 10%;
 			transition: 0.5s ease-out 100ms;
-			width: 60%;
+			width: 50%;
 			cursor: pointer;
-			margin-top: -100px;
+			margin-top: 50px;
+     
+      
 		}
 
 		.owner-info td img:hover {
@@ -80,9 +82,9 @@
 			margin-top: 100px;
 			margin-bottom: 80px;
 			margin: auto;
-    	padding-top: 40px ;
+    	padding-top: 100px ;
     	padding-bottom: 20px;
-    	width: 1000px;
+    	width: 1100px;
     	max-width: 100%;
 			text-align: justify;
       line-height: 35px;
@@ -172,7 +174,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(132, 79, 20, 0.75);
     overflow: hidden;
     width: 300%;
     height: 0;
