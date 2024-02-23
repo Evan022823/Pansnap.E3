@@ -14,9 +14,46 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Annapurna+SIL:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/landing-page.css">
 </head>
 
 <body>
+  <nav>
+    <div class="logo" id="home">
+        <a href="">
+            <img src="/assets/images/logo/Pansnap Studio Logo V2 Watermark.png" style="
+width: 80px;
+left: -5px;
+top: 0;
+padding: 0;
+margin: 5;
+">
+        </a>
+    </div>
+    <button type="button" class="btn-hamburger" data-action="nav-toggle">
+        <span> </span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <ul class="nav-menu">
+        <li class="active-home"><a href="../index.html">Home</a></li>
+        <li class="nav-item"><a href="./section-page/about.html" class="{% if request.path == about %} active {% endif %}">About</a></li>
+        <li class="nav-item"><a href="" class="{% if navbar == 'services'%} active {% endif %}">Services</a></li>
+        <li class="nav-item"><a href="" class="{% if navbar == 'hire-us'%} active {% endif %}">Hire-us</a></li>
+        <li class="nav-item dropdown">
+            <a href="#" data-action="dropdown-toggle">Portfolio</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="./section-page/portfolio.html" class="{% if navbar == 'portfolio'%} active {% endif %}">Outdoor Photos</a>
+                <a class="dropdown-item" href="" class="{% if navbar == 'studio-shoot'%} active {% endif %}">Indoor Photos</a>
+                <a class="dropdown-item" href="" class="{% if navbar == 'films'%} active {% endif %}">Films</a>
+            </div>
+        </li>
+        <li class="nav-item"><a href="./section-page/contact.html" class="">Contact</a></li>
+        <li class="nav-item"><a href="{% url 'notification'  %}"><span><i class='bx bxs-bell'></i></span> <span class="badge" style="color:white; background-color: red;"></span></a></li>
+    </ul>
+</nav>
   
 <div class="content-wrapper" id="about">
   <h2 class="about-h2">About Us</h2>
