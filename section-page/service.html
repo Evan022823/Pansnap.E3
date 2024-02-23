@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="./service.css">
+<link rel="stylesheet" href="../styles/landing-page.css">
+<nav>
+
+    <div class="logo" id="home">
+        <a href="">
+            <img src="/assets/images/logo/Pansnap Studio Logo V2 Watermark.png" style="
+        width: 80px;
+        left: -5px;
+        top: 0;
+        padding: 0;
+        margin: 5;
+        ">
+        </a>
+    </div>
+    <button type="button" class="btn-hamburger" data-action="nav-toggle">
+        <span> </span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <ul class="nav-menu">
+        <li class="nav-item"><a href="../index.html">Home</a></li>
+        <li class="nav-item"><a href="./about.html" class="{% if request.path == about %} active {% endif %}">About</a></li>
+        <li class="active-home"><a href="./service.html" class="{% if navbar == 'services'%} active {% endif %}">Services</a></li>
+        <li class="nav-item"><a href="" class="{% if navbar == 'hire-us'%} active {% endif %}">Hire-us</a></li>
+        <li class="nav-item dropdown">
+            <a href="#" data-action="dropdown-toggle">Portfolio</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="./outdoor.html" class="{% if navbar == 'portfolio'%} active {% endif %}">Outdoor Photos</a>
+                <a class="dropdown-item" href="" class="{% if navbar == 'studio-shoot'%} active {% endif %}">Indoor Photos</a>
+                <a class="dropdown-item" href="" class="{% if navbar == 'films'%} active {% endif %}">Films</a>
+            </div>
+        </li>
+        <li class="nav-item"><a href="./contact.html" class="">Contact</a></li>
+        <li class="nav-item"><a href="{% url 'notification'  %}"><span><i class='bx bxs-cart'></i></span> <span class="badge" style="color:white; background-color: red;font-size: 40px;"></span></a></li>
+    </ul>
+</nav>
+
+
+
+<p class="text">This is text</p>
+<div class="content-wrapper" id="services" data-aos="fade-up">
+    <h2>Services</h2>
+    <p>We want to serve you throughout your day and the entire planning process. Capturing your most important moments is what we do best. Below are the listed events, packages, and prices that Pansnap Studio offers.
+    
+</div>
+<div class="container">
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/prenup-outdoor.svg) ;" data-aos="fade-right">
+        <img src="/static/images/services/Price-list-blue/prenup-outdoor.svg" >
+    </div>
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/prenup-studio.svg) ;" data-aos="fade-left">
+        <img src="/static/images/services/Price-list-blue/prenup-studio.svg">
+    </div>
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/wedding-outdoor.svg) ;"data-aos="fade-right">
+        <img src="/static/images/services/Price-list-blue/wedding-outdoor.svg">
+    </div>
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/predebut-outdoor.svg) ;"data-aos="fade-left">
+        <img src="/static/images/services/Price-list-blue/predebut-outdoor.svg">
+    </div>
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/prenup-studio.svg) ;"data-aos="fade-right">
+        <img src="/static/images/services/Price-list-blue/predebut-studio.svg">
+    </div>
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/debut-outdoor.svg) ;"data-aos="fade-left">
+        <img src="/static/images/services/Price-list-blue/debut-outdoor.svg">
+    </div>
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/baptismal-outdoor.svg) ;"data-aos="fade-right">
+        <img src="/static/images/services/Price-list-blue/baptismal-outdoor.svg">
+    </div>
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/birthday-outdoor.svg) ;"data-aos="fade-left">
+        <img src="/static/images/services/Price-list-blue/birthday-outdoor.svg">
+    </div>
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/pre-birthday-studio.svg) ;"data-aos="fade-right">
+        <img src="/static/images/services/Price-list-blue/pre-birthday-studio.svg">
+    </div>
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/family-studio.svg) ;"data-aos="fade-left">
+        <img src="/static/images/services/Price-list-blue/family-studio.svg">
+    </div>
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/maternity-studio.svg) ;"data-aos="fade-right">
+        <img src="/static/images/services/Price-list-blue/maternity-studio.svg">
+    </div>
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/toddler-studio.svg) ;"data-aos="fade-left">
+        <img src="/static/images/services/Price-list-blue/toddler-studio.svg">
+    </div>
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/barkada-studio.svg) ;"data-aos="fade-right">
+        <img src="/static/images/services/Price-list-blue/barkada-studio.svg">
+    </div>
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/graduation-studio.svg) ;"data-aos="fade-left">
+        <img src="/static/images/services/Price-list-blue/graduation-studio.svg">
+    </div>
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/optionals.svg) ;"data-aos="fade-right">
+        <img src="/static/images/services/Price-list-blue/optional.svg">
+    </div>
+    <div class="box" style="--picture: url(/static/images/services/Price-list-yellow/note.svg) ;"data-aos="fade-left">
+        <img src="/static/images/services/Price-list-blue/note.svg">
+    </div>
+
+
+</div>
+

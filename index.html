@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="icon" href="/static/yellow-cam.png" type="image/x-icon">
+        <link rel="icon" href="/assets/yellow-cam.png" type="image/x-icon">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
@@ -64,18 +64,18 @@
                 <ul class="nav-menu">
                     <li class="active-home"><a href="">Home</a></li>
                     <li class="nav-item"><a href="./section-page/about.html" class="{% if request.path == about %} active {% endif %}">About</a></li>
-                    <li class="nav-item"><a href="" class="{% if navbar == 'services'%} active {% endif %}">Services</a></li>
+                    <li class="nav-item"><a href="./section-page/service.html" class="{% if navbar == 'services'%} active {% endif %}">Services</a></li>
                     <li class="nav-item"><a href="" class="{% if navbar == 'hire-us'%} active {% endif %}">Hire-us</a></li>
                     <li class="nav-item dropdown">
                         <a href="#" data-action="dropdown-toggle">Portfolio</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="./section-page/portfolio.html" class="{% if navbar == 'portfolio'%} active {% endif %}">Outdoor Photos</a>
+                            <a class="dropdown-item" href="./section-page/outdoor.html" class="{% if navbar == 'portfolio'%} active {% endif %}">Outdoor Photos</a>
                             <a class="dropdown-item" href="" class="{% if navbar == 'studio-shoot'%} active {% endif %}">Indoor Photos</a>
                             <a class="dropdown-item" href="" class="{% if navbar == 'films'%} active {% endif %}">Films</a>
                         </div>
                     </li>
                     <li class="nav-item"><a href="./section-page/contact.html" class="">Contact</a></li>
-                    <li class="nav-item"><a href="{% url 'notification'  %}"><span><i class='bx bxs-bell'></i></span> <span class="badge" style="color:white; background-color: red;"></span></a></li>
+                    <li class="nav-item"><a href="{% url 'notification'  %}"><span><i class='bx bxs-cart'></i></span> <span class="badge" style="color:white; background-color: red;font-size: 40px;"></span></a></li>
                 </ul>
             </nav>
 
@@ -107,9 +107,104 @@
                     </div>
                 </div>
                 <div class="bg-tagline">
-                    <div class="tagline">
-                        <h4>Every Click Tells A Story </h4>
-                    </div>
+                    
+                    <div class="tagline-animation">
+                        <h1 class="heading">Every Click<br>Tells Us A Story</h1>
+                        <div class="container-animation">
+                            <div class="child-container">
+                                <img src="https://picsum.photos/100" alt="pic 1">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/200" alt="pic 2">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/300" alt="pic 3">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/400" alt="pic 4">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/500" alt="pic 5">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/600" alt="pic 6">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/150" alt="pic 7">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/250" alt="pic 8">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/350" alt="pic 9">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/450" alt="pic 10">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/550" alt="pic 11">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/650" alt="pic 12">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/110" alt="pic 13">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/210" alt="pic 14">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/310" alt="pic 15">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/410" alt="pic 16">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/510" alt="pic 17">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/610" alt="pic 18">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/125" alt="pic 19">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/225" alt="pic 20">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/325" alt="pic 21">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/425" alt="pic 22">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/525" alt="pic 23">
+                            </div>
+                            <div class="child-container">
+                                <img src="https://picsum.photos/625" alt="pic 24">
+                            </div>
+                        </div>
+
+                     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="tagline">
+                            <h4>Every Click Tells A Story </h4>
+                        </div>
                 </div>
             </div>
             <section class="login_container">
@@ -336,7 +431,7 @@
     </div>
     <div class="bottom">
         <div class="copyright">
-            <p>Copyright &copy; 2022 Pansnap Studio</p>
+            <p>Copyright &copy; 2024 Pansnap Studio</p>
         </div>
     </div>
 </html>

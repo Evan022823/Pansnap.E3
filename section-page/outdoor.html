@@ -1,10 +1,46 @@
-<link rel="stylesheet" href="./portfolio.css">
+<link rel="stylesheet" href="./outdoor.css">
+<link rel="stylesheet" href="../styles/landing-page.css">
 <div class="content-wrapper">
   <h2 style="margin-top: 70px;" data-aos="fade-right">Portfolio</h2>
   <p data-aos="fade-up">You're about to throw the most important and epic party for your friends and family? We're in! We will be your ride or die. Our job is to catch every second, so you and your loved ones can just let go and live in the moment. Do you feel like we could vibe? Leave us a message and let's get this party started.<br><br>
   </p>
   <p data-aos="fade-up">Browse the event highlights below. For fuller outdoor and indoor shoots, the Pansnap Studio has it all!</p>
-
+  <nav>
+    <div class="logo" id="home">
+        <a href="">
+            <img src="/assets/images/logo/Pansnap Studio Logo V2 Watermark.png" style="
+width: 80px;
+left: -5px;
+top: 0;
+padding: 0;
+margin: 5;
+">
+        </a>
+    </div>
+    <button type="button" class="btn-hamburger" data-action="nav-toggle">
+        <span> </span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <ul class="nav-menu">
+        <li class="nav-item"><a href="../index.html">Home</a></li>
+        <li class="nav-item"><a href="./about.html" class="{% if request.path == about %} active {% endif %}">About</a></li>
+        <li class="nav-item"><a href="" class="{% if navbar == 'services'%} active {% endif %}">Services</a></li>
+        <li class="nav-item"><a href="" class="{% if navbar == 'hire-us'%} active {% endif %}">Hire-us</a></li>
+        <li class="nav-item dropdown">
+            <a class="active-home" href="#" data-action="dropdown-toggle" style="color: rgb(214, 121, 0);">Portfolio</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="./section-page/portfolio.html" class="{% if navbar == 'portfolio'%} active {% endif %}">Outdoor Photos</a>
+                <a class="dropdown-item" href="" class="{% if navbar == 'studio-shoot'%} active {% endif %}">Indoor Photos</a>
+                <a class="dropdown-item" href="" class="{% if navbar == 'films'%} active {% endif %}">Films</a>
+            </div>
+        </li>
+        <li class="nav-item"><a href="./section-page/contact.html" class="">Contact</a></li>
+        <li class="nav-item"><a href="{% url 'notification'  %}"><span><i class='bx bxs-cart'></i></span> <span class="badge" style="color:white; background-color: red;font-size: 40px;"></span></a></li>
+    </ul>
+</nav>
 <!--WEDDING Photos-->
 <section>
 <div style="margin-top:50px;">
@@ -24,11 +60,11 @@
    
         </div>
         <div class="slide">
-          <img src="/static/images/Portfolio/wedding/Wedding_img4.jpg" alt="">
+          <img src="/assets/images/Portfolio/wedding/Wedding_img4.jpg" alt="">
         
         </div>
         <div class="slide">
-          <img src="/static/images/Portfolio/wedding/Wedding_img5.jpg" alt="">
+          <img src="/assets/images/Portfolio/wedding/Wedding_img5.jpg" alt="">
         
         </div>
         <div class="slide">

@@ -13,8 +13,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Annapurna+SIL:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/landing-page.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
 </head>
 
 <body>
@@ -38,8 +40,8 @@ margin: 5;
         <span></span>
     </button>
     <ul class="nav-menu">
-        <li class="active-home"><a href="../index.html">Home</a></li>
-        <li class="nav-item"><a href="./section-page/about.html" class="{% if request.path == about %} active {% endif %}">About</a></li>
+        <li class="nav-item"><a href="../index.html">Home</a></li>
+        <li class="active-home"><a href="./about.html" class="{% if request.path == about %} active {% endif %}">About</a></li>
         <li class="nav-item"><a href="" class="{% if navbar == 'services'%} active {% endif %}">Services</a></li>
         <li class="nav-item"><a href="" class="{% if navbar == 'hire-us'%} active {% endif %}">Hire-us</a></li>
         <li class="nav-item dropdown">
@@ -51,31 +53,29 @@ margin: 5;
             </div>
         </li>
         <li class="nav-item"><a href="./section-page/contact.html" class="">Contact</a></li>
-        <li class="nav-item"><a href="{% url 'notification'  %}"><span><i class='bx bxs-bell'></i></span> <span class="badge" style="color:white; background-color: red;"></span></a></li>
+        <li class="nav-item"><a href="{% url 'notification'  %}"><span><i class='bx bxs-cart'></i></span> <span class="badge" style="color:white; background-color: red;font-size: 40px;"></span></a></li>
     </ul>
 </nav>
   
 <div class="content-wrapper" id="about">
   <h2 class="about-h2">About Us</h2>
-    <div class="about-owner"  >
-     
-
+    <div class="about-owner">
       <img src="/assets/images/about-bts1.png" alt="" 
       style=" 
       position: absolute;
-      width: 2500px;
-      height: 950px;
+      width: 1611px;
+      height: 800px;
       margin-top: -121.5px;
       object-fit: cover;
       margin-left: -350px;
       display: block;
       ">
       <div class="about" data-aos="fade-down">
-        <h2 >About Us: <br><span>Behind The Lens</span> </h2>
+        <h2 >About Us: <span>Behind The Lens</span> </h2>
       </div>
 
       
-      <div class="image-wrapper" style="align-items:center ; text-align:center; margin-top: -60px; " data-aos="zoom-in" >
+      <div class="image-wrapper" style="align-items:center ; text-align:center;  " data-aos="zoom-in" >
         <img class="img1 image-all" 
           src="/assets/images/Co-owner.jpg"
           style="margin: -70px; width: 300px;"
