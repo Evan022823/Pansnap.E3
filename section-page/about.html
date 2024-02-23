@@ -42,17 +42,17 @@ margin: 5;
     <ul class="nav-menu">
         <li class="nav-item"><a href="../index.html">Home</a></li>
         <li class="active-home"><a href="./about.html" class="{% if request.path == about %} active {% endif %}">About</a></li>
-        <li class="nav-item"><a href="" class="{% if navbar == 'services'%} active {% endif %}">Services</a></li>
+        <li class="nav-item"><a href="./service.html" class="{% if navbar == 'services'%} active {% endif %}">Services</a></li>
         <li class="nav-item"><a href="" class="{% if navbar == 'hire-us'%} active {% endif %}">Hire-us</a></li>
         <li class="nav-item dropdown">
             <a href="#" data-action="dropdown-toggle">Portfolio</a>
             <div class="dropdown-menu">
-                <a class="dropdown-item" href="./section-page/portfolio.html" class="{% if navbar == 'portfolio'%} active {% endif %}">Outdoor Photos</a>
+                <a class="dropdown-item" href="./outdoor.html" class="{% if navbar == 'portfolio'%} active {% endif %}">Outdoor Photos</a>
                 <a class="dropdown-item" href="" class="{% if navbar == 'studio-shoot'%} active {% endif %}">Indoor Photos</a>
                 <a class="dropdown-item" href="" class="{% if navbar == 'films'%} active {% endif %}">Films</a>
             </div>
         </li>
-        <li class="nav-item"><a href="./section-page/contact.html" class="">Contact</a></li>
+        <li class="nav-item"><a href="./contact.html" class="">Contact</a></li>
         <li class="nav-item"><a href="{% url 'notification'  %}"><span><i class='bx bxs-cart'></i></span> <span class="badge" style="color:white; background-color: red;font-size: 40px;"></span></a></li>
     </ul>
 </nav>
