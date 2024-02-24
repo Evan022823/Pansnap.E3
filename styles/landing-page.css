@@ -750,7 +750,7 @@ nav.opened .btn-hamburger span:nth-child(3) {
         padding: 50px;
     }
 
-    .container {
+    .container-service {
         flex-direction: column;
     }
 
@@ -888,6 +888,9 @@ nav.opened .btn-hamburger span:nth-child(3) {
 }
 
 /* END LOADER CSS */
+
+
+/* Tagline animation*/
   
 .tagline {
     width: 100%;
@@ -895,13 +898,23 @@ nav.opened .btn-hamburger span:nth-child(3) {
     overflow: hidden;
 }
 
+.heading{
+    font-family: "Montserrat", "Helvetica Neue";
+    font-weight: bolder;
+    color: #ffffff;
+    padding-top: 90px;
+    padding-left: 90px;
+    font-size: 80px;
+
+}
+
 
   @keyframes move {
     from {
-      transform: rotate(45deg) translate(-120px, -1000px);
+      transform: rotate(45deg) translate(-200px, -800px);
     }
     to {
-      transform: rotate(45deg) translate(-120px, -700px);
+      transform: rotate(45deg) translate(-200px, -1000px);
     }
   }
   
@@ -933,7 +946,7 @@ nav.opened .btn-hamburger span:nth-child(3) {
     border-radius: inherit;
     
   }
-s
+
 /*   
   @media screen and (max-width: 1000px) {
     .heading {
@@ -980,4 +993,4 @@ s
       }
     }
   }
-   */
+   
