@@ -1,199 +1,163 @@
-
-
-		 <!-- Video element -->
-		 <video src=
-		 "/assets/videos/JDPV PANSNAP Outro.mp4"
-				 type="video/mp4"  class="vid" 
-				 loop style="width: 100% ; cursor: pointer;">
-			 </video>
-		   
-			 <script>
-		   
-				 // Targeting video element 
-				 let clip = document.querySelector(".vid")
-		   
-				 /* Applying mouseover event on video clip 
-				 and then we call play() function to play 
-				 the video when the mouse is over the video */
-				 clip.addEventListener("mouseover", function (e) {
-					 clip.play();
-				 })
-		   
-				 /* Applying mouseout event on video clip 
-				 and then we call pause() function to stop 
-				 the video when the mouse is out the video */
-				 clip.addEventListener("mouseout", function (e) {
-					 clip.pause();
-				 })
-			 </script>
-		<div class="content container_home">
-			<div class="content-wrapper" id="home" data-aos="fade-up">
-				<div class="content-home">
-					<h2>Welcome <span style="color: #00bcd4;">{{request.user.username}}</span></h2>
-					
-					<p style="line-height: 35px;">We're so excited you're here. Feel free to explore our web-based photo and video site. Here, you may discover adorable high-quality service of photos and videos for hire. The perfect work approach can be difficult, dirty, and complicated at times. That's why we created Pansnap Studio - a place where people get work done, together. Our goal is to capture the special moment for you so that you can have wonderful memories to look back to. Of course, you might just enjoy a fun-filled look through the collection. We are glad to hear your thoughts about the pictures and videos on this site. You're in the right place. Let's create something beautiful, and uniquely yours. SAVE EVERY SHOT!
-					</p>
-				</div>
-				
-				
-			
-				
-
-
-
-			</div>
-				
-
-
-<section class="login_container">
-<div class="login_img" data-aos="fade-right">
-	<img src="/assets/images/LogInbg.jpg">
-</div>
-<div class=login_content>
-	<div class="loginform"  data-aos="fade-up">
-		<form method="POST" class="form-sign">
-		
-		<h2>Sign up </h2>
-		<table>
-			<tr >
-				<td> 
-				<div class="login_input">
-				<span style="margin-left: 1px;">First Name</span>
-				<input type="text" name="first_name" size="26" required  style="width: 120%; margin-right: -5px; width:107%; margin-left: -2px;">
-			</div>
-			</td>
-				<td>
-				<div class="login_input">
-					<span style="margin-left:20px ;">Last Name</span>
-					<input type="text" name="last_name" size="26" required style="margin-left: 15px; width: 93%;">
-				</div>
-				</td>
-			</tr>     
-			
-		</table>
-			<div class="login_input">
-				<span>Username</span>
-				<input type="text" name="username" size="26" required>
-			</div>
-			<div class="login_input">
-				<span>Email</span>
-				<input type="email" name="email" size="26" required>
-			
-			</div>
-			<div class="login_input">
-				<span>Password</span>
-				<input type="password" name="password" size="26" required id="myInput">
-				<span><input type="checkbox" onclick="myFunction()"	></span>Show Password
-			</div>
-			<div class="login_input">
-				<span>Re-type Password</span>
-				<input type="password" name="password2" size="26" required id="myInput2">
-				<span><input type="checkbox" onclick="myFunction2()"></span>Show Password
-			</div>
-			<!-- <div class="remember">
-				<label>
-					<input type="checkbox" name=""> Remember Me
-				</label>
-			</div> -->
-			
-			<div class="login_input" style="margin-top:40px;">
-				<input type="submit" value= "Sign-up" name="signup">
-			</div>
-			<div class="login_input">
-				<p>Have an account?
-					<a href="{% url 'login' %} " style=" color: #3dcbfe;" >Login</a></p>
-
-
-			</div>
-		</form>
-
-	</div>
-</div>
-
+<!-- Video element -->
+<video src=
+    "/assets/videos/JDPV PANSNAP Outro.mp4"
+    type="video/mp4"  class="vid" 
+    loop style="width: 100% ; cursor: pointer;">
+</video>
 <script>
-	function myFunction() {
-		var x = document.getElementById("myInput");
-		if (x.type === "password") {
-		x.type = "text";
-		} else {
-		x.type = "password";
-		}
-	}
-	function myFunction2() {
-		var x = document.getElementById("myInput2");
-		if (x.type === "password") {
-		x.type = "text";
-		} else {
-		x.type = "password";
-		}
-	}
-	</script>
-</section>
-<section class="contact-home" style="margin-top: 40px;">
-	<div class="content-contact" data-aos="fade-up">
-		<center><h2>Contact Us</h2></center>
-		<p>We'd love to hear from you. Here's how you can reach us.</p>
-	</div>
-	<div class="container">
-		<div class="contactInfo">
-			<div class="boxes" data-aos="fade-right">
-				<div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-				<div class="text">
-					<h3>Address</h3>
-					<p>218 Macapatan,<br>Baranggay Balubad,<br>Bulakan,Bulacan,3017</p>
-				</div>
-
-			</div>
-			<div class="boxes" data-aos="fade-right">
-				<div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
-				<div class="text">
-					<h3>Phone</h3>
-					<p>Smart: 0961-792-0778</p>
-				</div>
-
-			</div>
-			<div class="boxes" data-aos="fade-right">
-				<div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-				<div class="text">
-					<h3>Email</h3>
-					<p>pansnapstudio26@gmail.com</p>
-				</div>
-
-			</div>
-		</div>
-		<div class="contactForm" data-aos="fade-left">
-			<form method="POST">
-				
-				<h2>Send Message</h2>
-				
-				<div class="inputBox">
-					<input type="text" name="name" required="required">
-					<span>Full name</span>
-				</div>
-				
-				<div class="inputBox">
-					<input type="email" name="email" required="required">
-					<span>Email</span>
-				</div>
-			
-				<div class="inputBox">
-					<textarea required name="message"></textarea>
-					<span>Type your Message...</span>
-				</div>
-				<div class="inputBox">
-					<input type="submit" name="Send" style="margin-left: -2px;">
-				</div>
-			</form>
-		</div>
-	</div>
-
-</section>
-
-
-
-
-		</div>
-
-
-
-
+    // Targeting video element 
+    let clip = document.querySelector(".vid")
+    
+    /* Applying mouseover event on video clip 
+    and then we call play() function to play 
+    the video when the mouse is over the video */
+    clip.addEventListener("mouseover", function (e) {
+     clip.play();
+    })
+    
+    /* Applying mouseout event on video clip 
+    and then we call pause() function to stop 
+    the video when the mouse is out the video */
+    clip.addEventListener("mouseout", function (e) {
+     clip.pause();
+    })
+</script>
+<div class="content container_home">
+    <div class="content-wrapper" id="home" data-aos="fade-up">
+        <div class="content-home">
+            <h2>Welcome <span style="color: #00bcd4;">{{request.user.username}}</span></h2>
+            <p style="line-height: 35px;">We're so excited you're here. Feel free to explore our web-based photo and video site. Here, you may discover adorable high-quality service of photos and videos for hire. The perfect work approach can be difficult, dirty, and complicated at times. That's why we created Pansnap Studio - a place where people get work done, together. Our goal is to capture the special moment for you so that you can have wonderful memories to look back to. Of course, you might just enjoy a fun-filled look through the collection. We are glad to hear your thoughts about the pictures and videos on this site. You're in the right place. Let's create something beautiful, and uniquely yours. SAVE EVERY SHOT!
+            </p>
+        </div>
+    </div>
+    <section class="login_container">
+        <div class="login_img" data-aos="fade-right">
+            <img src="/assets/images/LogInbg.jpg">
+        </div>
+        <div class=login_content>
+            <div class="loginform"  data-aos="fade-up">
+                <form method="POST" class="form-sign">
+                    <h2>Sign up </h2>
+                    <table>
+                        <tr >
+                            <td>
+                                <div class="login_input">
+                                    <span style="margin-left: 1px;">First Name</span>
+                                    <input type="text" name="first_name" size="26" required  style="width: 120%; margin-right: -5px; width:107%; margin-left: -2px;">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="login_input">
+                                    <span style="margin-left:20px ;">Last Name</span>
+                                    <input type="text" name="last_name" size="26" required style="margin-left: 15px; width: 93%;">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="login_input">
+                        <span>Username</span>
+                        <input type="text" name="username" size="26" required>
+                    </div>
+                    <div class="login_input">
+                        <span>Email</span>
+                        <input type="email" name="email" size="26" required>
+                    </div>
+                    <div class="login_input">
+                        <span>Password</span>
+                        <input type="password" name="password" size="26" required id="myInput">
+                        <span><input type="checkbox" onclick="myFunction()"	></span>Show Password
+                    </div>
+                    <div class="login_input">
+                        <span>Re-type Password</span>
+                        <input type="password" name="password2" size="26" required id="myInput2">
+                        <span><input type="checkbox" onclick="myFunction2()"></span>Show Password
+                    </div>
+                    <!-- <div class="remember">
+                        <label>
+                        	<input type="checkbox" name=""> Remember Me
+                        </label>
+                        </div> -->
+                    <div class="login_input" style="margin-top:40px;">
+                        <input type="submit" value= "Sign-up" name="signup">
+                    </div>
+                    <div class="login_input">
+                        <p>Have an account?
+                            <a href="{% url 'login' %} " style=" color: #3dcbfe;" >Login</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+            	var x = document.getElementById("myInput");
+            	if (x.type === "password") {
+            	x.type = "text";
+            	} else {
+            	x.type = "password";
+            	}
+            }
+            function myFunction2() {
+            	var x = document.getElementById("myInput2");
+            	if (x.type === "password") {
+            	x.type = "text";
+            	} else {
+            	x.type = "password";
+            	}
+            }
+        </script>
+    </section>
+    <section class="contact-home" style="margin-top: 40px;">
+        <div class="content-contact" data-aos="fade-up">
+            <center>
+                <h2>Contact Us</h2>
+            </center>
+            <p>We'd love to hear from you. Here's how you can reach us.</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="boxes" data-aos="fade-right">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>218 Macapatan,<br>Baranggay Balubad,<br>Bulakan,Bulacan,3017</p>
+                    </div>
+                </div>
+                <div class="boxes" data-aos="fade-right">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>Smart: 0961-792-0778</p>
+                    </div>
+                </div>
+                <div class="boxes" data-aos="fade-right">
+                    <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>pansnapstudio26@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm" data-aos="fade-left">
+                <form method="POST">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="name" required="required">
+                        <span>Full name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="email" name="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required name="message"></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="Send" style="margin-left: -2px;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>

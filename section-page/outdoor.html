@@ -1,28 +1,28 @@
 <link rel="stylesheet" href="./outdoor.css">
 <link rel="stylesheet" href="../styles/landing-page.css">
 <div class="content-wrapper">
-  <h2 style="margin-top: 70px;" data-aos="fade-right">Portfolio</h2>
-  <p data-aos="fade-up">You're about to throw the most important and epic party for your friends and family? We're in! We will be your ride or die. Our job is to catch every second, so you and your loved ones can just let go and live in the moment. Do you feel like we could vibe? Leave us a message and let's get this party started.<br><br>
-  </p>
-  <p data-aos="fade-up">Browse the event highlights below. For fuller outdoor and indoor shoots, the Pansnap Studio has it all!</p>
-  <nav>
+<h2 style="margin-top: 70px;" data-aos="fade-right">Portfolio</h2>
+<p data-aos="fade-up">You're about to throw the most important and epic party for your friends and family? We're in! We will be your ride or die. Our job is to catch every second, so you and your loved ones can just let go and live in the moment. Do you feel like we could vibe? Leave us a message and let's get this party started.<br><br>
+</p>
+<p data-aos="fade-up">Browse the event highlights below. For fuller outdoor and indoor shoots, the Pansnap Studio has it all!</p>
+<nav>
     <div class="logo" id="home">
         <a href="">
-            <img src="/assets/images/logo/Pansnap Studio Logo V2 Watermark.png" style="
-width: 80px;
-left: -5px;
-top: 0;
-padding: 0;
-margin: 5;
-">
+        <img src="/assets/images/logo/Pansnap Studio Logo V2 Watermark.png" style="
+            width: 80px;
+            left: -5px;
+            top: 0;
+            padding: 0;
+            margin: 5;
+            ">
         </a>
     </div>
     <button type="button" class="btn-hamburger" data-action="nav-toggle">
-        <span> </span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+    <span> </span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
     </button>
     <ul class="nav-menu">
         <li class="nav-item"><a href="../index.html">Home</a></li>
@@ -44,488 +44,423 @@ margin: 5;
 <!--WEDDING Photos-->
 <section>
 <div style="margin-top:50px;">
-  <div class="grid-flex">
-    <div class="col col-image">
-      <div class="img-slider" data-aos="fade-right">
-        <div class="slide active">
-          <img src="/assets/images/Portfolio/wedding/Wedding_img1.jpg" alt="">
-
+    <div class="grid-flex">
+        <div class="col col-image">
+            <div class="img-slider" data-aos="fade-right">
+                <div class="slide active">
+                    <img src="/assets/images/Portfolio/wedding/Wedding_img1.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/assets/images/Portfolio/wedding/Wedding_img2.jpgs" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Portfolio/wedding/Wedding_img3.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/assets/images/Portfolio/wedding/Wedding_img4.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/assets/images/Portfolio/wedding/Wedding_img5.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Portfolio/wedding/Wedding_img6.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Portfolio/wedding/Wedding_img7.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Portfolio/wedding/Wedding_img8.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Portfolio/wedding/Wedding_img9.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/static/images/Portfolio/wedding/Wedding_img10.jpg" alt="">
+                </div>
+                <div class="navigation">
+                    <div class="btn active"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                    <div class="btn"></div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                var slides = document.querySelectorAll('.slide');
+                var btns = document.querySelectorAll('.btn');
+                let currentSlide = 1;
+                
+                // Javascript for image slider manual navigation
+                var manualNav = function(manual){
+                  slides.forEach((slide) => {
+                    slide.classList.remove('active');
+                
+                    btns.forEach((btn) => {
+                      btn.classList.remove('active');
+                    });
+                  });
+                
+                  slides[manual].classList.add('active');
+                  btns[manual].classList.add('active');
+                }
+                
+                btns.forEach((btn, i) => {
+                  btn.addEventListener("click", () => {
+                    manualNav(i);
+                    currentSlide = i;
+                  });
+                });
+                
+                // Javascript for image slider autoplay navigation
+                var repeat = function(activeClass){
+                  let active = document.getElementsByClassName('active');
+                  let i = 1;
+                
+                  var repeater = () => {
+                    setTimeout(function(){
+                      [...active].forEach((activeSlide) => {
+                        activeSlide.classList.remove('active');
+                      });
+                
+                    slides[i].classList.add('active');
+                    btns[i].classList.add('active');
+                    i++;
+                
+                    if(slides.length == i){
+                      i = 0;
+                    }
+                    if(i >= slides.length){
+                      return;
+                    }
+                    repeater();
+                  }, 4000);
+                  }
+                  repeater();
+                }
+                repeat();
+            </script>
         </div>
-        <div class="slide">
-          <img src="/assets/images/Portfolio/wedding/Wedding_img2.jpgs" alt="">
- 
+        <div class="col col-text">
+            <div class="Aligner-item" data-aos="fade-left">
+                <h2>Wedding</h2>
+                <p>&ldquo;We're capturing true love with all its flaws, not the idea of boring perfection. Your story deserves to be told in a way that’s real for you. Your love isn't ordinary, and neither is our website.&rdquo;
+                    <cite></cite>
+                </p>
+            </div>
         </div>
-        <div class="slide">
-          <img src="/static/images/Portfolio/wedding/Wedding_img3.jpg" alt="">
-   
-        </div>
-        <div class="slide">
-          <img src="/assets/images/Portfolio/wedding/Wedding_img4.jpg" alt="">
-        
-        </div>
-        <div class="slide">
-          <img src="/assets/images/Portfolio/wedding/Wedding_img5.jpg" alt="">
-        
-        </div>
-        <div class="slide">
-          <img src="/static/images/Portfolio/wedding/Wedding_img6.jpg" alt="">
-        
-        </div>
-        <div class="slide">
-          <img src="/static/images/Portfolio/wedding/Wedding_img7.jpg" alt="">
-        
-        </div>
-        <div class="slide">
-          <img src="/static/images/Portfolio/wedding/Wedding_img8.jpg" alt="">
-        
-        </div>
-        <div class="slide">
-          <img src="/static/images/Portfolio/wedding/Wedding_img9.jpg" alt="">
-        
-        </div>
-        <div class="slide">
-          <img src="/static/images/Portfolio/wedding/Wedding_img10.jpg" alt="">
-        
-        </div>
-        <div class="navigation">
-          <div class="btn active"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-          <div class="btn"></div>
-
-        </div>
-      </div>
-  
-      <script type="text/javascript">
-      var slides = document.querySelectorAll('.slide');
-      var btns = document.querySelectorAll('.btn');
-      let currentSlide = 1;
-  
-      // Javascript for image slider manual navigation
-      var manualNav = function(manual){
-        slides.forEach((slide) => {
-          slide.classList.remove('active');
-  
-          btns.forEach((btn) => {
-            btn.classList.remove('active');
-          });
-        });
-  
-        slides[manual].classList.add('active');
-        btns[manual].classList.add('active');
-      }
-  
-      btns.forEach((btn, i) => {
-        btn.addEventListener("click", () => {
-          manualNav(i);
-          currentSlide = i;
-        });
-      });
-  
-      // Javascript for image slider autoplay navigation
-      var repeat = function(activeClass){
-        let active = document.getElementsByClassName('active');
-        let i = 1;
-  
-        var repeater = () => {
-          setTimeout(function(){
-            [...active].forEach((activeSlide) => {
-              activeSlide.classList.remove('active');
-            });
-  
-          slides[i].classList.add('active');
-          btns[i].classList.add('active');
-          i++;
-  
-          if(slides.length == i){
-            i = 0;
-          }
-          if(i >= slides.length){
-            return;
-          }
-          repeater();
-        }, 4000);
-        }
-        repeater();
-      }
-      repeat();
-      </script>
     </div>
-
-    <div class="col col-text">
-      <div class="Aligner-item" data-aos="fade-left">
-        <h2>Wedding</h2>
-        <p>&ldquo;We're capturing true love with all its flaws, not the idea of boring perfection. Your story deserves to be told in a way that’s real for you. Your love isn't ordinary, and neither is our website.&rdquo;
-          <cite></cite>
-        </p>
-      </div>
-    </div>
-  </div>
 </div>
-
-
-
 <!--DEBUT Photos-->
 <div style="margin-top:140px;">
-  <div class="grid-flex">
-    <div class="col col-image">
-      &nbsp;
-      <div class="img-sliders" data-aos="fade-left">
-        <div class="slides actives">
-          <img src="/assets/images/Portfolio/predebut/outdoor/predebut_img1.jpg" alt="">
-
+    <div class="grid-flex">
+        <div class="col col-image">
+            &nbsp;
+            <div class="img-sliders" data-aos="fade-left">
+                <div class="slides actives">
+                    <img src="/assets/images/Portfolio/predebut/outdoor/predebut_img1.jpg" alt="">
+                </div>
+                <div class="slides">
+                    <img src="/assets/images/Portfolio/debut/debut_img3.png" alt="">
+                </div>
+                <div class="slides">
+                    <img src="/assets/images/Portfolio/predebut/outdoor/predebut_img3.jpg" alt="">
+                </div>
+                <div class="slides">
+                    <img src="/static/images/Portfolio/debut/debut_img4.jpg" alt="">
+                </div>
+                <div class="slides">
+                    <img src="/static/images/Portfolio/predebut/outdoor/predebut_img5.jpg" alt="">
+                </div>
+                <div class="slides">
+                    <img src="/static/images/Portfolio/debut/debut_img6.jpg" alt="">
+                </div>
+                <div class="slides">
+                    <img src="/static/images/Portfolio/predebut/outdoor/predebut_img7.png" alt="">
+                </div>
+                <div class="slides">
+                    <img src="/static/images/Portfolio/debut/debut_img8.jpg" alt="">
+                </div>
+                <div class="slides">
+                    <img src="/static/images/Portfolio/predebut/outdoor/predebut_img9.png" alt="">
+                </div>
+                <div class="slides">
+                    <img src="/static/images/Portfolio/debut/debut_img5.jpg" alt="">
+                </div>
+                <div class="navigations">
+                    <div class="btns actives"></div>
+                    <div class="btns"></div>
+                    <div class="btns"></div>
+                    <div class="btns"></div>
+                    <div class="btns"></div>
+                    <div class="btns"></div>
+                    <div class="btns"></div>
+                    <div class="btns"></div>
+                    <div class="btns"></div>
+                    <div class="btns"></div>
+                </div>
+            </div>
         </div>
-        <div class="slides">
-          <img src="/assets/images/Portfolio/debut/debut_img3.png" alt="">
- 
-        </div>
-        <div class="slides">
-          <img src="/assets/images/Portfolio/predebut/outdoor/predebut_img3.jpg" alt="">
-   
-        </div>
-        <div class="slides">
-          <img src="/static/images/Portfolio/debut/debut_img4.jpg" alt="">
-        
-        </div>
-        <div class="slides">
-          <img src="/static/images/Portfolio/predebut/outdoor/predebut_img5.jpg" alt="">
-        
-        </div>
-        <div class="slides">
-          <img src="/static/images/Portfolio/debut/debut_img6.jpg" alt="">
-        
-        </div>
-        <div class="slides">
-          <img src="/static/images/Portfolio/predebut/outdoor/predebut_img7.png" alt="">
-        
-        </div>
-        <div class="slides">
-          <img src="/static/images/Portfolio/debut/debut_img8.jpg" alt="">
-        
-        </div>
-        <div class="slides">
-          <img src="/static/images/Portfolio/predebut/outdoor/predebut_img9.png" alt="">
-        
-        </div>
-        <div class="slides">
-          <img src="/static/images/Portfolio/debut/debut_img5.jpg" alt="">
-        
-        </div>
-        
-        <div class="navigations">
-          <div class="btns actives"></div>
-          <div class="btns"></div>
-          <div class="btns"></div>
-          <div class="btns"></div>
-          <div class="btns"></div>
-          <div class="btns"></div>
-          <div class="btns"></div>
-          <div class="btns"></div>
-          <div class="btns"></div>
-          <div class="btns"></div>
-
-        </div>
-      </div>
-    </div>
-    <script type="text/javascript">
-      var slide = document.querySelectorAll('.slides');
-      var btn = document.querySelectorAll('.btns');
-      let currentSlides = 1;
-  
-      // Javascript for image slider manual navigation
-      var manualNav = function(manual){
-        slide.forEach((slides) => {
-          slides.classList.remove('actives');
-  
-          btn.forEach((btns) => {
-            btns.classList.remove('actives');
-          });
-        });
-  
-        slide[manual].classList.add('actives');
-        btn[manual].classList.add('actives');
-      }
-  
-      btn.forEach((btns, i) => {
-        btns.addEventListener("click", () => {
-          manualNav(i);
-          currentSlides = i;
-        });
-      });
-  
-      // Javascript for image slider autoplay navigation
-      var repeat = function(activeClass){
-        let actives = document.getElementsByClassName('actives');
-        let i = 1;
-  
-        var repeater = () => {
-          setTimeout(function(){
-            [...actives].forEach((activeSlides) => {
-              activeSlides.classList.remove('actives');
+        <script type="text/javascript">
+            var slide = document.querySelectorAll('.slides');
+            var btn = document.querySelectorAll('.btns');
+            let currentSlides = 1;
+            
+            // Javascript for image slider manual navigation
+            var manualNav = function(manual){
+              slide.forEach((slides) => {
+                slides.classList.remove('actives');
+            
+                btn.forEach((btns) => {
+                  btns.classList.remove('actives');
+                });
+              });
+            
+              slide[manual].classList.add('actives');
+              btn[manual].classList.add('actives');
+            }
+            
+            btn.forEach((btns, i) => {
+              btns.addEventListener("click", () => {
+                manualNav(i);
+                currentSlides = i;
+              });
             });
-  
-          slide[i].classList.add('actives');
-          btn[i].classList.add('actives');
-          i++;
-  
-          if(slide.length == i){
-            i = 0;
-          }
-          if(i >= slide.length){
-            return;
-          }
-          repeater();
-        }, 4000);
-        }
-        repeater();
-      }
-      repeat();
-      </script>
-    <div class="col col-text col-left">
-      <div class="Aligner-item"data-aos="fade-right">
-        <h2>Debut</h2>
-        <p>&ldquo;We at Pansnap Studio are committed to bringing you the highest production value on your big day. Hand in hand, we will surely make you a superstar on your big day.&rdquo;
-        </p>
-      </div>
+            
+            // Javascript for image slider autoplay navigation
+            var repeat = function(activeClass){
+              let actives = document.getElementsByClassName('actives');
+              let i = 1;
+            
+              var repeater = () => {
+                setTimeout(function(){
+                  [...actives].forEach((activeSlides) => {
+                    activeSlides.classList.remove('actives');
+                  });
+            
+                slide[i].classList.add('actives');
+                btn[i].classList.add('actives');
+                i++;
+            
+                if(slide.length == i){
+                  i = 0;
+                }
+                if(i >= slide.length){
+                  return;
+                }
+                repeater();
+              }, 4000);
+              }
+              repeater();
+            }
+            repeat();
+        </script>
+        <div class="col col-text col-left">
+            <div class="Aligner-item"data-aos="fade-right">
+                <h2>Debut</h2>
+                <p>&ldquo;We at Pansnap Studio are committed to bringing you the highest production value on your big day. Hand in hand, we will surely make you a superstar on your big day.&rdquo;
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
-
-
-
 <!--BAPTISMAL Photos-->
 <div style="margin-top:140px;">
-  <div class="grid-flex">
-    <div class="col col-image" >
-      &nbsp;
-      <div class="img-slideri" data-aos="fade-right">
-        <div class="slidei activei">
-          <img src="/static/images/Portfolio/baptismal/baptismal_img1.jpg" alt="">
-
+    <div class="grid-flex">
+        <div class="col col-image" >
+            &nbsp;
+            <div class="img-slideri" data-aos="fade-right">
+                <div class="slidei activei">
+                    <img src="/static/images/Portfolio/baptismal/baptismal_img1.jpg" alt="">
+                </div>
+                <div class="slidei">
+                    <img src="/static/images/Portfolio/baptismal/baptismal_img2.jpg" alt="">
+                </div>
+                <div class="slidei">
+                    <img src="/static/images/Portfolio/baptismal/baptismal_img3.jpg" alt="">
+                </div>
+                <div class="slidei">
+                    <img src="/static/images/Portfolio/baptismal/baptismal_img4.png" alt="">
+                </div>
+                <div class="slidei">
+                    <img src="/static/images/Portfolio/baptismal/baptismal_img5.jpg" alt="">
+                </div>
+                <div class="slidei">
+                    <img src="/static/images/Portfolio/baptismal/baptismal_img6.jpg" alt="">
+                </div>
+                <div class="slidei">
+                    <img src="/static/images/Portfolio/baptismal/baptismal_img7.jpg" alt="">
+                </div>
+                <div class="slidei">
+                    <img src="/static/images/Portfolio/baptismal/baptismal_img8.jpg" alt="">
+                </div>
+                <div class="slidei">
+                    <img src="/static/images/Portfolio/baptismal/baptismal_img9.jpg" alt="">
+                </div>
+                <div class="slidei">
+                    <img src="/static/images/Portfolio/baptismal/baptismal_img10.jpg" alt="">
+                </div>
+                <div class="navigationi">
+                    <div class="btni activei"></div>
+                    <div class="btni"></div>
+                    <div class="btni"></div>
+                    <div class="btni"></div>
+                    <div class="btni"></div>
+                    <div class="btni"></div>
+                    <div class="btni"></div>
+                    <div class="btni"></div>
+                    <div class="btni"></div>
+                    <div class="btni"></div>
+                </div>
+            </div>
         </div>
-        <div class="slidei">
-          <img src="/static/images/Portfolio/baptismal/baptismal_img2.jpg" alt="">
- 
+        <script type="text/javascript">
+            var slidei = document.querySelectorAll('.slidei');
+            var btni = document.querySelectorAll('.btni');
+            let currentSlidei = 1;
+            
+            
+            // Javascript for image slider autoplay navigation
+            var repeat = function(activeClass){
+              let activei = document.getElementsByClassName('activei');
+              let i = 1;
+            
+              var repeater = () => {
+                setTimeout(function(){
+                  [...activei].forEach((activeSlidei) => {
+                    activeSlidei.classList.remove('activei');
+                  });
+            
+                slidei[i].classList.add('activei');
+                btni[i].classList.add('activei');
+                i++;
+            
+                if(slidei.length == i){
+                  i = 0;
+                }
+                if(i >= slidei.length){
+                  return;
+                }
+                repeater();
+              }, 4000);
+              }
+              repeater();
+            }
+            repeat();
+        </script>
+        <div class="col col-text">
+            <div class="Aligner-item" data-aos="fade-left">
+                <h2>Baptismal</h2>
+                <p>&ldquo;What's better than feeling fresh, clean, and new? A baptism is a unique, exciting, and sacred time for you and your family, and that is why we commit to bringing you the best in photography to preserve these very special family moments.&rdquo;
+                </p>
+            </div>
         </div>
-        <div class="slidei">
-          <img src="/static/images/Portfolio/baptismal/baptismal_img3.jpg" alt="">
-   
-        </div>
-        <div class="slidei">
-          <img src="/static/images/Portfolio/baptismal/baptismal_img4.png" alt="">
-        
-        </div>
-        <div class="slidei">
-          <img src="/static/images/Portfolio/baptismal/baptismal_img5.jpg" alt="">
-        
-        </div>
-        <div class="slidei">
-          <img src="/static/images/Portfolio/baptismal/baptismal_img6.jpg" alt="">
-        
-        </div>
-        <div class="slidei">
-          <img src="/static/images/Portfolio/baptismal/baptismal_img7.jpg" alt="">
-        
-        </div>
-        <div class="slidei">
-          <img src="/static/images/Portfolio/baptismal/baptismal_img8.jpg" alt="">
-        
-        </div>
-        <div class="slidei">
-          <img src="/static/images/Portfolio/baptismal/baptismal_img9.jpg" alt="">
-        
-        </div>
-        <div class="slidei">
-          <img src="/static/images/Portfolio/baptismal/baptismal_img10.jpg" alt="">
-        
-    
-        
-        </div>
-        <div class="navigationi">
-          <div class="btni activei"></div>
-          <div class="btni"></div>
-          <div class="btni"></div>
-          <div class="btni"></div>
-          <div class="btni"></div>
-          <div class="btni"></div>
-          <div class="btni"></div>
-          <div class="btni"></div>
-          <div class="btni"></div>
-          <div class="btni"></div>
-
-        </div>
-      </div>
     </div>
-
-    <script type="text/javascript">
-      var slidei = document.querySelectorAll('.slidei');
-      var btni = document.querySelectorAll('.btni');
-      let currentSlidei = 1;
-  
-  
-      // Javascript for image slider autoplay navigation
-      var repeat = function(activeClass){
-        let activei = document.getElementsByClassName('activei');
-        let i = 1;
-  
-        var repeater = () => {
-          setTimeout(function(){
-            [...activei].forEach((activeSlidei) => {
-              activeSlidei.classList.remove('activei');
-            });
-  
-          slidei[i].classList.add('activei');
-          btni[i].classList.add('activei');
-          i++;
-  
-          if(slidei.length == i){
-            i = 0;
-          }
-          if(i >= slidei.length){
-            return;
-          }
-          repeater();
-        }, 4000);
-        }
-        repeater();
-      }
-      repeat();
-      </script>
-
-
-
-    <div class="col col-text">
-      <div class="Aligner-item" data-aos="fade-left">
-        <h2>Baptismal</h2>
-        <p>&ldquo;What's better than feeling fresh, clean, and new? A baptism is a unique, exciting, and sacred time for you and your family, and that is why we commit to bringing you the best in photography to preserve these very special family moments.&rdquo;
-        </p>
-      </div>
-    </div>
-  </div>
 </div>
-
-  
-
 <!--BIRTHDAY Photos-->
 <div style="margin-top: 140px;">
-  <div class="grid-flex">
-    <div class="col col-image" >
-
-      &nbsp;
-      <div class="img-sliderw" data-aos="fade-left">
-        <div class="slidew activew">
-          <img src="/static/images/Portfolio/birthday/birthday_img1.png" alt="">
-
+    <div class="grid-flex">
+        <div class="col col-image" >
+            &nbsp;
+            <div class="img-sliderw" data-aos="fade-left">
+                <div class="slidew activew">
+                    <img src="/static/images/Portfolio/birthday/birthday_img1.png" alt="">
+                </div>
+                <div class="slidew">
+                    <img src="/static/images/Portfolio/birthday/birthday_img2.jpg" alt="">
+                </div>
+                <div class="slidew">
+                    <img src="/static/images/Portfolio/birthday/birthday_img3.jpg" alt="">
+                </div>
+                <div class="slidew">
+                    <img src="/static/images/Portfolio/birthday/birthday_img4.jpg" alt="">
+                </div>
+                <div class="slidew">
+                    <img src="/static/images/Portfolio/birthday/birthday_img5.jpg" alt="">
+                </div>
+                <div class="slidew">
+                    <img src="/static/images/Portfolio/birthday/birthday_img6.png" alt="">
+                </div>
+                <div class="slidew">
+                    <img src="/static/images/Portfolio/birthday/birthday_img7.png" alt="">
+                </div>
+                <div class="slidew">
+                    <img src="/static/images/Portfolio/birthday/birthday_img8.jpg" alt="">
+                </div>
+                <div class="slidew">
+                    <img src="/static/images/Portfolio/birthday/birthday_img9.jpg" alt="">
+                </div>
+                <div class="slidew">
+                    <img src="/static/images/Portfolio/birthday/birthday _img10.jpg" alt="">
+                </div>
+                <div class="navigationw">
+                    <div class="btnw activew"></div>
+                    <div class="btnw"></div>
+                    <div class="btnw"></div>
+                    <div class="btnw"></div>
+                    <div class="btnw"></div>
+                    <div class="btnw"></div>
+                    <div class="btnw"></div>
+                    <div class="btnw"></div>
+                    <div class="btnw"></div>
+                    <div class="btnw"></div>
+                </div>
+            </div>
         </div>
-        <div class="slidew">
-          <img src="/static/images/Portfolio/birthday/birthday_img2.jpg" alt="">
- 
+        <div class="col col-text col-left">
+            <div class="Aligner-item" data-aos="fade-right">
+                <h2>Birthday</h2>
+                <p>&ldquo;Get inspired by these birthday shots! Looking for inspiration for your birthday shoot? Check out some of the best birthday moments our photographer has captured.&rdquo;
+                </p>
+            </div>
         </div>
-        <div class="slidew">
-          <img src="/static/images/Portfolio/birthday/birthday_img3.jpg" alt="">
-   
-        </div>
-        <div class="slidew">
-          <img src="/static/images/Portfolio/birthday/birthday_img4.jpg" alt="">
-        
-        </div>
-        <div class="slidew">
-          <img src="/static/images/Portfolio/birthday/birthday_img5.jpg" alt="">
-        
-        </div>
-        <div class="slidew">
-          <img src="/static/images/Portfolio/birthday/birthday_img6.png" alt="">
-        
-        </div>
-        <div class="slidew">
-          <img src="/static/images/Portfolio/birthday/birthday_img7.png" alt="">
-        
-        </div>
-        <div class="slidew">
-          <img src="/static/images/Portfolio/birthday/birthday_img8.jpg" alt="">
-        
-        </div>
-        <div class="slidew">
-          <img src="/static/images/Portfolio/birthday/birthday_img9.jpg" alt="">
-        
-        </div>
-        <div class="slidew">
-          <img src="/static/images/Portfolio/birthday/birthday _img10.jpg" alt="">
-        
-        </div>
-        <div class="navigationw">
-          <div class="btnw activew"></div>
-          <div class="btnw"></div>
-          <div class="btnw"></div>
-          <div class="btnw"></div>
-          <div class="btnw"></div>
-          <div class="btnw"></div>
-          <div class="btnw"></div>
-          <div class="btnw"></div>
-          <div class="btnw"></div>
-          <div class="btnw"></div>
-
-        </div>
-      </div>
     </div>
-    
-    <div class="col col-text col-left">
-      <div class="Aligner-item" data-aos="fade-right">
-        <h2>Birthday</h2>
-        <p>&ldquo;Get inspired by these birthday shots! Looking for inspiration for your birthday shoot? Check out some of the best birthday moments our photographer has captured.&rdquo;
-        </p>
-      </div>
-    </div>
-  </div>
 </div>
-
-  <script type="text/javascript">
+<script type="text/javascript">
     var slidew = document.querySelectorAll('.slidew');
     var btnw = document.querySelectorAll('.btnw');
     let currentSlidew = 1;
-
+    
     // Javascript for image slider manual navigation
     var manualNav = function(manual){
       slidew.forEach((slidew) => {
         slidew.classList.remove('activew');
-
+    
         btnw.forEach((btns) => {
           btnw.classList.remove('activew');
         });
       });
-
+    
       slidew[manual].classList.add('activew');
       btnw[manual].classList.add('activew');
     }
-
+    
     btnw.forEach((btnw, i) => {
       btnw.addEventListener("click", () => {
         manualNav(i);
         currentSlidew = i;
       });
     });
-
+    
     // Javascript for image slider autoplay navigation
     var repeat = function(activeClass){
       let activew = document.getElementsByClassName('activew');
       let i = 1;
-
+    
       var repeater = () => {
         setTimeout(function(){
           [...activew].forEach((activeSlidew) => {
             activeSlidew.classList.remove('activew');
           });
-
+    
         slidew[i].classList.add('activew');
         btnw[i].classList.add('activew');
         i++;
-
+    
         if(slidew.length == i){
           i = 0;
         }
@@ -538,7 +473,4 @@ margin: 5;
       repeater();
     }
     repeat();
-    </script>
-
-
-
+</script>
