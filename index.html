@@ -21,337 +21,341 @@
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
     </head>
     <body>
-        <div class="go-top">
-        </div>
-        <script>
-            $(function() {
-                //Scroll event
-                $(window).scroll(function() {
-                    var scrolled = $(window).scrollTop();
-                    if (scrolled > 200) $('.go-top').fadeIn('slow');
-                    if (scrolled < 200) $('.go-top').fadeOut('slow');
-                });
-                //Click event
-                $('.go-top').click(function() {
-                    $("html, body").animate({
-                        scrollTop: "0",
-                    }, 500);
-                });
-            });
-        </script>
-
-        <!--  -->
-        <div id="wrap">
-            <nav>
-                <div class="logo" id="home">
-                    <a href="">
-                        <img src="/assets/images/logo/Pansnap Studio Logo V2 Watermark.png" style="
-					width: 80px;
-					left: -5px;
-					top: 0;
-					padding: 0;
-					margin: 5;
-					">
-                    </a>
-                </div>
-                <button type="button" class="btn-hamburger" data-action="nav-toggle">
-                    <span> </span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li class="active-home"><a href="">Home</a></li>
-                    <li class="nav-item"><a href="./section-page/about.html" class="{% if request.path == about %} active {% endif %}">About</a></li>
-                    <li class="nav-item"><a href="./section-page/service.html" class="{% if navbar == 'services'%} active {% endif %}">Services</a></li>
-                    <li class="nav-item"><a href="" class="{% if navbar == 'hire-us'%} active {% endif %}">Hire-us</a></li>
-                    <li class="nav-item dropdown">
-                        <a href="#" data-action="dropdown-toggle">Portfolio</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="./section-page/outdoor.html" class="{% if navbar == 'portfolio'%} active {% endif %}">Outdoor Photos</a>
-                            <a class="dropdown-item" href="" class="{% if navbar == 'studio-shoot'%} active {% endif %}">Indoor Photos</a>
-                            <a class="dropdown-item" href="" class="{% if navbar == 'films'%} active {% endif %}">Films</a>
-                        </div>
-                    </li>
-                    <li class="nav-item"><a href="./section-page/contact.html" class="">Contact</a></li>
-                    <li class="nav-item"><a href="{% url 'notification'  %}"><span><i class='bx bxs-cart'></i></span> <span class="badge" style="color:white; background-color: red;font-size: 40px;"></span></a></li>
-                </ul>
-            </nav>
-
-            <!-- Video element -->
-
-            <div class="video-container">
-                <video src="/assets/videos/Pansnap Studio Logo White BG (1920 × 1080 px).mp4" type="video/mp4" class="vid" loop style="width: 100% ; cursor: pointer;">
-                </video>
-                <!-- <button class="overlay-button">Inquire Now</button> -->
-              </div>
-              
-
-
-
-                
-            <script>
-                // Targeting video element 
-                let clip = document.querySelector(".vid")
-                /* Applying mouseover event on video clip 
-                and then we call play() function to play 
-                the video when the mouse is over the video */
-                clip.addEventListener("mouseover", function(e) {
-                    clip.play();
-                })
-                /* Applying mouseout event on video clip 
-                and then we call pause() function to stop 
-                the video when the mouse is out the video */
-                clip.addEventListener("mouseout", function(e) {
-                    clip.pause();
-                })
-            </script>
-            <div class="content container_home">
-                <div class="content-wrapper" id="home" data-aos="fade-up">
-                    <div class="content-home">
-                        <h2>Welcome! <span style="color: #00bcd4;"></span></h2>
-                        <p style="line-height: 35px;">We're so excited you're here. Feel free to explore our web-based photo and video site. Here, you may discover adorable high-quality service of photos and videos for hire. The perfect work approach can be difficult, dirty, and complicated at times. That's why we created Pansnap Studio - a place where people get work done, together. Our goal is to capture the special moment for you so that you can have wonderful memories to look back to. Of course, you might just enjoy a fun-filled look through the collection. We are glad to hear your thoughts about the pictures and videos on this site. You're in the right place. Let's create something beautiful, and uniquely yours.
-                        </p>
+        <div class="evan">
+                    <div class="go-top">
                     </div>
-                </div>
-                <div class="bg-tagline">
-                    
-                        <div class="tagline">
-                            <h1 class="heading" data-aos="fade-right" delay="0.5s">Every Clicks<br>Tells Us A Story</h1>
-                            <div class="container-gallery" data-aos="fade-left" delay="0.5s">
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/1.jpg" alt="pic 1">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/2.jpg" alt="pic 2">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/3.jpg" alt="pic 3">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/4.jpg" alt="pic 4">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/5.jpg" alt="pic 5">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/6.jpg" alt="pic 6">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/7.jpg" alt="pic 7">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/8.jpg" alt="pic 8">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/9.jpg" alt="pic 9">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/10.jpg" alt="pic 10">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/11.jpg" alt="pic 11">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/12.jpg" alt="pic 12">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/1.jpg" alt="pic 13">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/2.jpg" alt="pic 14">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/3.jpg" alt="pic 15">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/4.jpg" alt="pic 16">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/5.jpg" alt="pic 17">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/6.jpg" alt="pic 18">
-                                </div>
-                                <div class="child-container">
-                                    <img src="/assets/images/taglinepics/7.jpg" alt="pic 19">
-                                </div>
-                               
-                            </div>
+                    <script>
+                        $(function() {
+                            //Scroll event
+                            $(window).scroll(function() {
+                                var scrolled = $(window).scrollTop();
+                                if (scrolled > 200) $('.go-top').fadeIn('slow');
+                                if (scrolled < 200) $('.go-top').fadeOut('slow');
+                            });
+                            //Click event
+                            $('.go-top').click(function() {
+                                $("html, body").animate({
+                                    scrollTop: "0",
+                                }, 500);
+                            });
+                        });
+                    </script>
 
+                    <!--  -->
+                    <div id="wrap">
+                        <nav>
+                            <div class="logo" id="home">
+                                <a href="">
+                                    <img src="/assets/images/logo/Pansnap Studio Logo V2 Watermark.png" style="
+                                width: 80px;
+                                left: -5px;
+                                top: 0;
+                                padding: 0;
+                                margin: 5;
+                                ">
+                                </a>
+                            </div>
+                            <button type="button" class="btn-hamburger" data-action="nav-toggle">
+                                <span> </span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <ul class="nav-menu">
+                                <li class="active-home"><a href="">Home</a></li>
+                                <li class="nav-item"><a href="./section-page/about.html" class="{% if request.path == about %} active {% endif %}">About</a></li>
+                                <li class="nav-item"><a href="./section-page/service.html" class="{% if navbar == 'services'%} active {% endif %}">Services</a></li>
+                                <li class="nav-item"><a href="" class="{% if navbar == 'hire-us'%} active {% endif %}">Hire-us</a></li>
+                                <li class="nav-item dropdown">
+                                    <a href="#" data-action="dropdown-toggle">Portfolio</a>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="./section-page/outdoor.html" class="{% if navbar == 'portfolio'%} active {% endif %}">Outdoor Photos</a>
+                                        <a class="dropdown-item" href="" class="{% if navbar == 'studio-shoot'%} active {% endif %}">Indoor Photos</a>
+                                        <a class="dropdown-item" href="" class="{% if navbar == 'films'%} active {% endif %}">Films</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item"><a href="./section-page/contact.html" class="">Contact</a></li>
+                                <li class="nav-item"><a href="{% url 'notification'  %}"><span><i class='bx bxs-cart'></i></span> <span class="badge" style="color:white; background-color: red;font-size: 40px;"></span></a></li>
+                            </ul>
+                        </nav>
+
+                        <!-- Video element -->
+
+                        <div class="video-container">
+                            <video src="/assets/videos/Pansnap Studio Logo White BG (1920 × 1080 px).mp4" type="video/mp4" class="vid" loop style="width: 100% ; cursor: pointer;">
+                            </video>
+                            <!-- <button class="overlay-button">Inquire Now</button> -->
                         </div>
-                </div>
-            </div>
-            <section class="login_container">
-                <div class="login_img" data-aos="fade-right">
-                    <img src="/assets/images/login-bg.jpg">
-                </div>
-                <div class=login_content>
-                    <div class="loginform" data-aos="fade-up">
-                        <form method="POST" class="form-sign">
-                            <h2>Sign up </h2>
-                            <table>
-                                <tr>
-                                    <td>
-                                        <div class="login_input">
-                                            <span style="margin-left: 1px;">First Name</span>
-                                            <input type="text" name="first_name" size="26" required style="width: 120%; margin-right: -5px; width:107%; margin-left: -2px;">
+                        
+
+
+
+                            
+                        <script>
+                            // Targeting video element 
+                            let clip = document.querySelector(".vid")
+                            /* Applying mouseover event on video clip 
+                            and then we call play() function to play 
+                            the video when the mouse is over the video */
+                            clip.addEventListener("mouseover", function(e) {
+                                clip.play();
+                            })
+                            /* Applying mouseout event on video clip 
+                            and then we call pause() function to stop 
+                            the video when the mouse is out the video */
+                            clip.addEventListener("mouseout", function(e) {
+                                clip.pause();
+                            })
+                        </script>
+                        <div class="content container_home">
+                            <div class="content-wrapper" id="home" data-aos="fade-up">
+                                <div class="content-home">
+                                    <h2>Welcome! <span style="color: #00bcd4;"></span></h2>
+                                    <p style="line-height: 35px;">We're so excited you're here. Feel free to explore our web-based photo and video site. Here, you may discover adorable high-quality service of photos and videos for hire. The perfect work approach can be difficult, dirty, and complicated at times. That's why we created Pansnap Studio - a place where people get work done, together. Our goal is to capture the special moment for you so that you can have wonderful memories to look back to. Of course, you might just enjoy a fun-filled look through the collection. We are glad to hear your thoughts about the pictures and videos on this site. You're in the right place. Let's create something beautiful, and uniquely yours.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="bg-tagline">
+                                
+                                    <div class="tagline">
+                                        <h1 class="heading" data-aos="fade-right" delay="0.5s">Every Clicks<br>Tells Us A Story</h1>
+                                        <div class="container-gallery" data-aos="fade-left" delay="0.5s">
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/1.jpg" alt="pic 1">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/2.jpg" alt="pic 2">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/3.jpg" alt="pic 3">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/4.jpg" alt="pic 4">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/5.jpg" alt="pic 5">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/6.jpg" alt="pic 6">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/7.jpg" alt="pic 7">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/8.jpg" alt="pic 8">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/9.jpg" alt="pic 9">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/10.jpg" alt="pic 10">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/11.jpg" alt="pic 11">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/12.jpg" alt="pic 12">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/1.jpg" alt="pic 13">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/2.jpg" alt="pic 14">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/3.jpg" alt="pic 15">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/4.jpg" alt="pic 16">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/5.jpg" alt="pic 17">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/6.jpg" alt="pic 18">
+                                            </div>
+                                            <div class="child-container">
+                                                <img src="/assets/images/taglinepics/7.jpg" alt="pic 19">
+                                            </div>
+                                        
                                         </div>
-                                    </td>
-                                    <td>
+
+                                    </div>
+                            </div>
+                        </div>
+                        <section class="login_container">
+                            <div class="login_img" data-aos="fade-right">
+                                <img src="/assets/images/login-bg.jpg">
+                            </div>
+                            <div class=login_content>
+                                <div class="loginform" data-aos="fade-up">
+                                    <form method="POST" class="form-sign">
+                                        <h2>Sign up </h2>
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <div class="login_input">
+                                                        <span style="margin-left: 1px;">First Name</span>
+                                                        <input type="text" name="first_name" size="26" required style="width: 120%; margin-right: -5px; width:107%; margin-left: -2px;">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="login_input">
+                                                        <span style="margin-left:20px ;">Last Name</span>
+                                                        <input type="text" name="last_name" size="26" required style="margin-left: 15px; width: 93%;">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
                                         <div class="login_input">
-                                            <span style="margin-left:20px ;">Last Name</span>
-                                            <input type="text" name="last_name" size="26" required style="margin-left: 15px; width: 93%;">
+                                            <span>Username</span>
+                                            <input type="text" name="username" size="26" required>
                                         </div>
-                                    </td>
-                                </tr>
-                            </table>
-                            <div class="login_input">
-                                <span>Username</span>
-                                <input type="text" name="username" size="26" required>
-                            </div>
-                            <div class="login_input">
-                                <span>Email</span>
-                                <input type="email" name="email" size="26" required>
-                            </div>
-                            <div class="login_input">
-                                <span>Password</span>
-                                <input type="password" name="password" size="26" required id="myInput">
-                                <span><input type="checkbox" onclick="myFunction()"	></span>Show Password
-                            </div>
-                            <div class="login_input">
-                                <span>Re-type Password</span>
-                                <input type="password" name="password2" size="26" required id="myInput2">
-                                <span><input type="checkbox" onclick="myFunction2()"></span>Show Password
-                            </div>
+                                        <div class="login_input">
+                                            <span>Email</span>
+                                            <input type="email" name="email" size="26" required>
+                                        </div>
+                                        <div class="login_input">
+                                            <span>Password</span>
+                                            <input type="password" name="password" size="26" required id="myInput">
+                                            <span><input type="checkbox" onclick="myFunction()"	></span>Show Password
+                                        </div>
+                                        <div class="login_input">
+                                            <span>Re-type Password</span>
+                                            <input type="password" name="password2" size="26" required id="myInput2">
+                                            <span><input type="checkbox" onclick="myFunction2()"></span>Show Password
+                                        </div>
 
-                            <!-- <div class="remember">
-				<label>
-					<input type="checkbox" name=""> Remember Me
-				</label>
-			</div> -->
-                            <div class="login_input" style="margin-top:40px;">
-                                <input type="submit" value="Sign-up" name="signup">
-                            </div>
-                            <div class="login_input">
-                                <p>Have an account?
-                                    <a href="" style=" color: #3dcbfe; text-decoration: none;">Login</a>
-                                </p>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <script>
-                    function myFunction() {
-                        var x = document.getElementById("myInput");
-                        if (x.type === "password") {
-                            x.type = "text";
-                        } else {
-                            x.type = "password";
-                        }
-                    }
-                    function myFunction2() {
-                        var x = document.getElementById("myInput2");
-                        if (x.type === "password") {
-                            x.type = "text";
-                        } else {
-                            x.type = "password";
-                        }
-                    }
-                </script>
-            </section>
-            
-            <div class="waves-io" >
-
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" data-aos="fade-down"><path fill="#573b1f" fill-opacity="1" d="M0,192L21.8,170.7C43.6,149,87,107,131,85.3C174.5,64,218,64,262,90.7C305.5,117,349,171,393,176C436.4,181,480,139,524,144C567.3,149,611,203,655,224C698.2,245,742,235,785,218.7C829.1,203,873,181,916,154.7C960,128,1004,96,1047,74.7C1090.9,53,1135,43,1178,37.3C1221.8,32,1265,32,1309,58.7C1352.7,85,1396,139,1418,165.3L1440,192L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"></path></svg>
-
-
-                <section class="contact-home" >
-
-                    
-                    <div class="content-contact" data-aos="fade-up">
-                        <center>
-                            <h2>Contact Us</h2>
-                        </center>
-                        <p>We'd love to hear from you. Here's how you can reach us.</p>
-                    </div>
-                    <div class="container">
-                        <div class="contactInfo">
-                            <div class="boxes" data-aos="fade-right">
-                                <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                                <div class="text">
-                                    <h3>Address</h3>
-                                    <p>218 Macapatan,<br>Baranggay Balubad,<br>Bulakan,Bulacan,3017</p>
+                                        <!-- <div class="remember">
+                            <label>
+                                <input type="checkbox" name=""> Remember Me
+                            </label>
+                        </div> -->
+                                        <div class="login_input" style="margin-top:40px;">
+                                            <input type="submit" value="Sign-up" name="signup">
+                                        </div>
+                                        <div class="login_input">
+                                            <p>Have an account?
+                                                <a href="" style=" color: #3dcbfe; text-decoration: none;">Login</a>
+                                            </p>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                            <div class="boxes" data-aos="fade-right">
-                                <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                                <div class="text">
-                                    <h3>Phone</h3>
-                                    <p>Smart: 0961-792-0778</p>
+                            <script>
+                                function myFunction() {
+                                    var x = document.getElementById("myInput");
+                                    if (x.type === "password") {
+                                        x.type = "text";
+                                    } else {
+                                        x.type = "password";
+                                    }
+                                }
+                                function myFunction2() {
+                                    var x = document.getElementById("myInput2");
+                                    if (x.type === "password") {
+                                        x.type = "text";
+                                    } else {
+                                        x.type = "password";
+                                    }
+                                }
+                            </script>
+                        </section>
+                        
+                        <div class="waves-io" >
+
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" data-aos="fade-down"><path fill="#573b1f" fill-opacity="1" d="M0,192L21.8,170.7C43.6,149,87,107,131,85.3C174.5,64,218,64,262,90.7C305.5,117,349,171,393,176C436.4,181,480,139,524,144C567.3,149,611,203,655,224C698.2,245,742,235,785,218.7C829.1,203,873,181,916,154.7C960,128,1004,96,1047,74.7C1090.9,53,1135,43,1178,37.3C1221.8,32,1265,32,1309,58.7C1352.7,85,1396,139,1418,165.3L1440,192L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"></path></svg>
+
+
+                            <section class="contact-home" >
+
+                                
+                                <div class="content-contact" data-aos="fade-up">
+                                    <center>
+                                        <h2>Contact Us</h2>
+                                    </center>
+                                    <p>We'd love to hear from you. Here's how you can reach us.</p>
+                                </div>
+                                <div class="container">
+                                    <div class="contactInfo">
+                                        <div class="boxes" data-aos="fade-right">
+                                            <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                                            <div class="text">
+                                                <h3>Address</h3>
+                                                <p>218 Macapatan,<br>Baranggay Balubad,<br>Bulakan,Bulacan,3017</p>
+                                            </div>
+                                        </div>
+                                        <div class="boxes" data-aos="fade-right">
+                                            <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                                            <div class="text">
+                                                <h3>Phone</h3>
+                                                <p>Smart: 0961-792-0778</p>
+                                            </div>
+                                        </div>
+                                        <div class="boxes" data-aos="fade-right">
+                                            <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                                            <div class="text">
+                                                <h3>Email</h3>
+                                                <p>pansnapstudio26@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contactForm" data-aos="fade-left">
+                                        <form method="POST">
+                                            <h2>Send Message</h2>
+                                            <div class="inputBox">
+                                                <input type="text" name="name" required="required">
+                                                <span>Full name</span>
+                                            </div>
+                                            <div class="inputBox">
+                                                <input type="email" name="email" required="required">
+                                                <span>Email</span>
+                                            </div>
+                                            <div class="inputBox">
+                                                <textarea required name="message"></textarea>
+                                                <span>Type your Message...</span>
+                                            </div>
+                                            <div class="inputBox">
+                                                <input type="submit" name="Send" style="margin-left: -2px;">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </section>
+                            </div>
+
+                            <!-- START LOADER HTML -->
+                            <div class="fullpage-loader">
+                                <div class="fullpage-loader__logo">
+
+                                    <!-- this img tag pointing to an external image is here for an example of what not to do, read the page to understand why to use a base64 image -->
+
+                                    <!-- 		<img src="https://cdn.shopify.com/s/files/1/0497/3073/files/logosmall_400x.png?v=1539650409" /> -->
+                                    <img src="./assets/images/logo/pansnap_watermark.png" width="200" />
                                 </div>
                             </div>
-                            <div class="boxes" data-aos="fade-right">
-                                <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
-                                <div class="text">
-                                    <h3>Email</h3>
-                                    <p>pansnapstudio26@gmail.com</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contactForm" data-aos="fade-left">
-                            <form method="POST">
-                                <h2>Send Message</h2>
-                                <div class="inputBox">
-                                    <input type="text" name="name" required="required">
-                                    <span>Full name</span>
-                                </div>
-                                <div class="inputBox">
-                                    <input type="email" name="email" required="required">
-                                    <span>Email</span>
-                                </div>
-                                <div class="inputBox">
-                                    <textarea required name="message"></textarea>
-                                    <span>Type your Message...</span>
-                                </div>
-                                <div class="inputBox">
-                                    <input type="submit" name="Send" style="margin-left: -2px;">
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </section>
-        </div>
 
-        <!-- START LOADER HTML -->
-        <div class="fullpage-loader">
-            <div class="fullpage-loader__logo">
-
-                <!-- this img tag pointing to an external image is here for an example of what not to do, read the page to understand why to use a base64 image -->
-
-                <!-- 		<img src="https://cdn.shopify.com/s/files/1/0497/3073/files/logosmall_400x.png?v=1539650409" /> -->
-                <img src="./assets/images/logo/pansnap_watermark.png" width="200" />
-            </div>
-        </div>
-
-        <!-- END LOADER HTML -->
-        <script>
-            const loaderEl = document.getElementsByClassName('fullpage-loader')[0];
-            document.addEventListener('readystatechange', (event) => {
-                // const readyState = "interactive";
-                const readyState = "complete";
-                if (document.readyState == readyState) {
-                    // when document ready add lass to fadeout loader
-                    loaderEl.classList.add('fullpage-loader--invisible');
-                    // when loader is invisible remove it from the DOM
-                    setTimeout(() => {
-                        loaderEl.parentNode.removeChild(loaderEl);
-                    }, 2000)
-                }
-            });
-        </script>
+                            <!-- END LOADER HTML -->
+                            <script>
+                                const loaderEl = document.getElementsByClassName('fullpage-loader')[0];
+                                document.addEventListener('readystatechange', (event) => {
+                                    // const readyState = "interactive";
+                                    const readyState = "complete";
+                                    if (document.readyState == readyState) {
+                                        // when document ready add lass to fadeout loader
+                                        loaderEl.classList.add('fullpage-loader--invisible');
+                                        // when loader is invisible remove it from the DOM
+                                        setTimeout(() => {
+                                            loaderEl.parentNode.removeChild(loaderEl);
+                                        }, 2000)
+                                    }
+                                });
+                            </script>
+                    </div> 
+            </div>           
     </body>
+            
     <script>
         let dropdownProfile = document.querySelector("[data-action='dropdown-toggle-profile']");
         let dropdown_profile = document.querySelector('.dropdown-profile');
