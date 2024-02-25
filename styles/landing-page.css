@@ -596,7 +596,7 @@ nav.opened .btn-hamburger span:nth-child(3) {
 
 .contact-home {
     position: relative;
-    min-height: 100vh;
+    min-height: 80vh;
     
     display: flex;
     justify-content: center;
