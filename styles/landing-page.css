@@ -349,14 +349,13 @@ nav .nav-item > a {
     line-height: 70px;
     color: #fff6e5;
     text-decoration: none;
-    font-weight: bold;
 }
 
 nav .active-home {
     color: #d89718;
     display: inline-block;
     text-decoration: none;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: #be5f00;
 }
 
@@ -626,6 +625,7 @@ nav.opened .btn-hamburger span:nth-child(3) {
     font-weight: 500;
     color: #a87641;
 }
+
 
 .content-contact p {
     font-size: 20px;

@@ -1,4 +1,4 @@
- /*ABOUT Section*/
+ /* ABOUT Section
 		/*About the owners*/
 		.about-owner {
 			display: block;
@@ -160,8 +160,10 @@
 
 
   .main_container{
-    margin: 6% 0 0 36%;
-    position: relative;
+    /* margin: 6% 0 0 36%; */
+    position:relative ;
+    margin-left: auto;
+    margin-right: auto;
     width: 25%;
 
   }
@@ -227,4 +229,4 @@
     }
  
 }
-
+ 
