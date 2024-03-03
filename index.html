@@ -83,10 +83,13 @@
                         clip.pause();
                     });
                 </script>
+
+
+
                 <div class="content container_home">
                     <div class="content-wrapper" id="home" data-aos="fade-up">
                         <div class="content-home">
-                            <h2>Welcome! <span style="color: #00bcd4;"></span></h2>
+                            <h2 id="welcome-msg">Welcome! <span style="color: #00bcd4;"></span></h2>
                             <p style="line-height: 35px;">
                                 We're so excited you're here. Feel free to explore our web-based photo and video site. Here, you may discover adorable high-quality service of photos and videos for hire. The perfect work approach can be
                                 difficult, dirty, and complicated at times. That's why we created Pansnap Studio - a place where people get work done, together. Our goal is to capture the special moment for you so that you can have
@@ -163,6 +166,13 @@
                         </div>
                     </div>
                 </div>
+
+                <script> 
+                    const username = "";
+                    const welcomeMsg = document.getElementById("welcome-msg");
+                    welcomeMsg.textContent  += username === " " ? ` Guest ` : username;
+                </script>
+
                 <section class="login_container">
                     <div class="login_img" data-aos="fade-right">
                         <img src="/assets/images/login-bg.jpg" />
@@ -334,8 +344,7 @@
                         }
                     });
                 </script>
-            </div>
-        </div>
+            
     </body>
 
     <script>
