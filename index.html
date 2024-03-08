@@ -218,6 +218,50 @@
                                     <div id="runaway-container">
                                         <button id="runaway">Sign Up</button>
                                     </div>
+                                
+                                    <div id="modal-background">
+                                        <div id="modal">
+                                          <span id="close-btn">&times;</span>
+                                          <p>Irur</p>
+                                          <!-- <div class="buttons">
+                                            <button class="yes">
+                                              YES
+                                            </button>
+                                            <button class="no">
+                                              NO
+                                            </button>
+                                          </div> -->
+                                        </div>
+                                    </div>
+                                    <script type="text/javascript" src="js/script.js"></script>    
+                                <script> 
+                                 // select the open-btn button
+                                let openBtn = document.getElementById('runaway');
+                                    // select the modal-background
+                                let modalBackground = document.getElementById('modal-background');
+                                    // select the close-btn 
+                                let closeBtn = document.getElementById('close-btn');
+
+                                    // shows the modal when the user clicks open-btn
+                                openBtn.addEventListener('click', function() {
+                                modalBackground.style.display = 'block';
+                                    });
+
+                                    // hides the modal when the user clicks close-btn
+                                closeBtn.addEventListener('click', function() {
+                                modalBackground.style.display = 'none';
+                                    });
+
+                                    // hides the modal when the user clicks outside the modal
+                                window.addEventListener('click', function(event) {
+                                    // check if the event happened on the modal-background
+                                if (event.target === modalBackground) {
+                                        // hides the modal
+                                    modalBackground.style.display = 'none';
+                                }
+                                });   
+                                </script>
+                                
                                 </div>
                                 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
                                 <script>
@@ -239,9 +283,9 @@
                                         $('#runaway-container').css('margin-top', mTop);
                                     },
 
-                                    showWin: function(e) {
-                                        alert('Nice! Pasado na kami');
-                                    }
+                                    // showWin: function(e) {
+                                    //     alert('Nice! Pasado na kami');
+                                    // }
                                 };
 
                                 stupidButton.init();
