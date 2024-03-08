@@ -83,13 +83,10 @@
                         clip.pause();
                     });
                 </script>
-
-
-
                 <div class="content container_home">
                     <div class="content-wrapper" id="home" data-aos="fade-up">
                         <div class="content-home">
-                            <h2 id="welcome-msg">Welcome! <span style="color: #00bcd4;"></span></h2>
+                            <h2>Welcome! <span style="color: #00bcd4;"></span></h2>
                             <p style="line-height: 35px;">
                                 We're so excited you're here. Feel free to explore our web-based photo and video site. Here, you may discover adorable high-quality service of photos and videos for hire. The perfect work approach can be
                                 difficult, dirty, and complicated at times. That's why we created Pansnap Studio - a place where people get work done, together. Our goal is to capture the special moment for you so that you can have
@@ -166,13 +163,6 @@
                         </div>
                     </div>
                 </div>
-
-                <script> 
-                    const username = "";
-                    const welcomeMsg = document.getElementById("welcome-msg");
-                    welcomeMsg.textContent  += username === " " ? ` Guest ` : username;
-                </script>
-
                 <section class="login_container">
                     <div class="login_img" data-aos="fade-right">
                         <img src="/assets/images/login-bg.jpg" />
@@ -221,9 +211,41 @@
                                 <input type="checkbox" name=""> Remember Me
                             </label>
                         </div> -->
-                                <div class="login_input" style="margin-top: 40px;">
+                                <!-- <div class="login_input" style="margin-top: 40px;">
                                     <input type="submit" value="Sign-up" name="signup" />
+                                </div> -->
+                                <div class="container">
+                                    <div id="runaway-container">
+                                        <button id="runaway">Sign Up</button>
+                                    </div>
                                 </div>
+                                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+                                <script>
+                                    var stupidButton = {
+                                    init: function() {
+                                        this.attachEvents();
+                                    },
+
+                                    attachEvents: function() {
+                                        $('#runaway-container').on('hover', this.flyAway);
+                                        $('#runaway').on('click', this.showWin);
+                                    },
+
+                                    flyAway: function(e) {
+                                        mLeft = Math.random() * 400;
+                                        mTop = Math.random() * 500;
+
+                                        $('#runaway-container').css('margin-left', mLeft);
+                                        $('#runaway-container').css('margin-top', mTop);
+                                    },
+
+                                    showWin: function(e) {
+                                        alert('Nice! Pasado na kami');
+                                    }
+                                };
+
+                                stupidButton.init();
+                                </script>
                                 <div class="login_input">
                                     <p>
                                         Have an account?
@@ -254,7 +276,7 @@
                 </section>
 
                 <div class="waves-io" data-aos="fade-down">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" data-aos="fade-down" style="margin-top: -10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" data-aos="fade-down" style="margin-top: 10px;">
                         <path
                             fill="#573b1f"
                             fill-opacity="1"
@@ -344,7 +366,8 @@
                         }
                     });
                 </script>
-            
+            </div>
+        </div>
     </body>
 
     <script>
