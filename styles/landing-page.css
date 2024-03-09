@@ -189,16 +189,14 @@ section .login_content .loginform h2 {
     letter-spacing: 1px;
 }
 
-
 section .login_content .loginform .login_input {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 
 section .login_content .loginform .login_input p {
     width: 100%;
     font-size: 16px;
     color: #d89718;
-
 }
 
 section .login_content .loginform .login_input p a {
@@ -357,7 +355,6 @@ nav .active-home {
     color: #d89718;
     display: inline-block;
     text-decoration: none;
-    font-weight: bold;
     /* font-weight: bold; */
     color: #be5f00;
 }
@@ -976,104 +973,105 @@ input[type="submit"] :hover {
     border-radius: inherit;
 }
 
+/* _______________________________NEW SIGN IN / LOGIN FORM_____________________________________________ */
 
+.newform{
+	width: 500px;
+	height: 600px;
+	background:#f2f2f2;
+	overflow: hidden;
+	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+	border-radius: 12px;
 
-#runaway-container {
-	position: absolute;
-	width: 150px;
-	margin: 0 auto;
-	margin-top: -5px;
-    margin-left: -310px;
-    
+	/* border: 3px solid #eeeeee; */
 }
-
-#runaway {
-
-    background: #d89718;
-    color: #ffffff;
-    outline: none;
-    border: none;
-    font-weight: 500;
-    cursor: pointer;
-    padding: 15px;
-    width: 150px;
-}
-
-.login_input p{
-    margin-top: 30px;
-}
-
-
-
-
-
-#modal-background {
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.2);
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin-left: -1000px;
-    margin-top: -155px;
-    width: 3000px;
-    height: 150%;
-    z-index: 1;
+.newform:hover {
+    /* border: 2px solid #927e69; */
+    transform: scale(1.);	
+    box-shadow:  11px 11px 19px #d6d6d6,
+				-11px -11px 19px #ffffff;
   }
   
-  #modal {
-    background-color: #fff;
+#chk{
+	display: none;
+}
+.signup{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+.newform label{
+	color: #573b1f;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+    font-size: 50px;
+	margin: 55px;
+    padding-top: 35px;
+	font-weight: bolder;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+    font-family: "Montserrat", sans-serif;
+}
+.newform input{
+	width: 80%;
+	height: 45px;
+	/* background: #e0dede; */
+	justify-content: center;
+	display: flex;
+	margin: 20px auto;
+	padding: 10px;
+	border: 1px solid #a87641;
+	outline: none;
+	border-radius: 30px;
+}
+.newform button{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #a87641;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 20px;
+	outline: none;
+	border: none;
+	border-radius: 30px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+.newform button:hover{
+	background: #b87c44;
+}
+.login{
+	height: 520px;
+	background: #fffff0;
+	border-radius: 50% / 10%;
+	transform: translateY(-180px);
+	transition: .8s ease-in-out;
+}
+.login label{
+	color: #a87641;
+	transform: scale(.5);
+}
+
+#chk:checked ~ .login{
+	transform: translateY(-590px);
+}
+#chk:checked ~ .login label{
+	transform: scale(1);	
+}
+#chk:checked ~ .signup label{
+	transform: scale(.6);
+}
+
+.form img {
     position: absolute;
-    top: 40%;
-    left: auto;
-    right: 60%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    font-size: 1.5rem;
-    animation-name: animatemodal;
-    animation-duration: 0.4s;
-  }
-  
-  /* .yes, .no {
-    border: none;
-    padding: 7px 14px;
-    font-size: 1rem;
-    border-radius: 5px;
-  } */
-  
-  /* .yes {
-    background-color: #00ff00;
-  }
-  
-  .no {
-    background-color: #ff0000;
-  } */
-  
-  #close-btn {
-    align-self: flex-end;
-  }
-  
-  #close-btn:hover {
+    height: 1px;
+    top: 3px;
+    right: 6px;
     cursor: pointer;
-    color: #ff0000;
-  }
-  
-  /* modal part end */
-  
-  /* animation part */
-  @keyframes animatemodal {
-    from {
-      top: -300px;
-      opacity: 0;
-    }
-    to {
-      top: 50%;
-      opacity: 1;
-    }
-  }
-  /* animation part end */
+}
+

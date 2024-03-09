@@ -83,10 +83,13 @@
                         clip.pause();
                     });
                 </script>
+
+
+
                 <div class="content container_home">
                     <div class="content-wrapper" id="home" data-aos="fade-up">
                         <div class="content-home">
-                            <h2>Welcome! <span style="color: #00bcd4;"></span></h2>
+                            <h2 id="welcome-msg">Welcome! <span style="color: #00bcd4;"></span></h2>
                             <p style="line-height: 35px;">
                                 We're so excited you're here. Feel free to explore our web-based photo and video site. Here, you may discover adorable high-quality service of photos and videos for hire. The perfect work approach can be
                                 difficult, dirty, and complicated at times. That's why we created Pansnap Studio - a place where people get work done, together. Our goal is to capture the special moment for you so that you can have
@@ -163,13 +166,21 @@
                         </div>
                     </div>
                 </div>
+<!-- ______________________________________________________________________________WELCOME USERNAME?______________________________________________________________ -->
+                <script> 
+                    const username = "";
+                    const welcomeMsg = document.getElementById("welcome-msg");
+                    welcomeMsg.textContent  += username === " " ? ` Guest ` : username;
+                </script>
+<!-- ______________________________________________________________________________________________________________________________________________________________ -->
                 <section class="login_container">
                     <div class="login_img" data-aos="fade-right">
                         <img src="/assets/images/login-bg.jpg" />
                     </div>
-                    <div class="login_content">
-                        <div class="loginform" data-aos="fade-up">
-                            <form method="POST" class="form-sign">
+<!-- ______________________________________________________________________________LOGIN FORM______________________________________________________________________ -->
+                    <!-- <div class="login_content"> -->
+                        <!-- <div class="loginform" data-aos="fade-up"> -->
+                            <!-- <form method="POST" class="form-sign">
                                 <h2>Sign up</h2>
                                 <table>
                                     <tr>
@@ -206,98 +217,23 @@
                                     <span><input type="checkbox" onclick="myFunction2()" /></span>Show Password
                                 </div>
 
-                                <!-- <div class="remember">
+
+                                <div class="remember">
                             <label>
                                 <input type="checkbox" name=""> Remember Me
                             </label>
-                        </div> -->
-                                <!-- <div class="login_input" style="margin-top: 40px;">
+                        </div>
+                                <div class="login_input" style="margin-top: 40px;">
                                     <input type="submit" value="Sign-up" name="signup" />
-                                </div> -->
-                                <div class="container">
-                                    <div id="runaway-container">
-                                        <button id="runaway">Sign Up</button>
-                                    </div>
-                                
-                                    <div id="modal-background">
-                                        <div id="modal">
-                                          <span id="close-btn">&times;</span>
-                                          <p>Irur</p>
-                                          <!-- <div class="buttons">
-                                            <button class="yes">
-                                              YES
-                                            </button>
-                                            <button class="no">
-                                              NO
-                                            </button>
-                                          </div> -->
-                                        </div>
-                                    </div>
-                                    <script type="text/javascript" src="js/script.js"></script>    
-                                <script> 
-                                 // select the open-btn button
-                                let openBtn = document.getElementById('runaway');
-                                    // select the modal-background
-                                let modalBackground = document.getElementById('modal-background');
-                                    // select the close-btn 
-                                let closeBtn = document.getElementById('close-btn');
-
-                                    // shows the modal when the user clicks open-btn
-                                openBtn.addEventListener('click', function() {
-                                modalBackground.style.display = 'block';
-                                    });
-
-                                    // hides the modal when the user clicks close-btn
-                                closeBtn.addEventListener('click', function() {
-                                modalBackground.style.display = 'none';
-                                    });
-
-                                    // hides the modal when the user clicks outside the modal
-                                window.addEventListener('click', function(event) {
-                                    // check if the event happened on the modal-background
-                                if (event.target === modalBackground) {
-                                        // hides the modal
-                                    modalBackground.style.display = 'none';
-                                }
-                                });   
-                                </script>
-                                
                                 </div>
-                                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-                                <script>
-                                    var stupidButton = {
-                                    init: function() {
-                                        this.attachEvents();
-                                    },
-
-                                    attachEvents: function() {
-                                        $('#runaway-container').on('hover', this.flyAway);
-                                        $('#runaway').on('click', this.showWin);
-                                    },
-
-                                    flyAway: function(e) {
-                                        mLeft = Math.random() * 400;
-                                        mTop = Math.random() * 500;
-
-                                        $('#runaway-container').css('margin-left', mLeft);
-                                        $('#runaway-container').css('margin-top', mTop);
-                                    },
-
-                                    // showWin: function(e) {
-                                    //     alert('Nice! Pasado na kami');
-                                    // }
-                                };
-
-                                stupidButton.init();
-                                </script>
                                 <div class="login_input">
                                     <p>
                                         Have an account?
                                         <a href="" style="color: #009eec; text-decoration: none;">Login</a>
                                     </p>
                                 </div>
-                            </form>
-                        </div>
+                            </form> -->
+                        <!-- </div>
                     </div>
                     <script>
                         function myFunction() {
@@ -316,11 +252,70 @@
                                 x.type = "password";
                             }
                         }
-                    </script>
+                    </script> -->
+
+                    <div class="newform" data-aos="fade-up">  	
+                        <input type="checkbox" id="chk" aria-hidden="true">
+                            <div class="signup">
+                                <form>
+                                    <label for="chk" aria-hidden="true" style="font-family: Arial, Helvetica, sans-serif;">Sign up</label>
+                                    <input id="firstnametxt" type="text" name="txt" placeholder="First Name" required="" style="width: 39%; margin-left: 50px;" >
+                                    <input id="firstnametxt" type="text" name="txt" placeholder="Last Name" required="" style="width: 39%; margin-right: 50px; margin-top: -65px;" >
+                                    <input type="text" name="txt" placeholder="User name" required="">
+                                    <input type="email" name="email" placeholder="Email" required="">
+                                    <input oninput="return formvalid()" type="password" name="pswd" placeholder="Password" required="" id="pass" autocomplete="off">
+                                    <img src="https://cdn2.iconfinder.com/data/icons/basic-ui-interface-v-2/32/hide-512.png" onclick="show()" id="showimg" style="height: 23px; margin-left: 410px; display: flex; margin-top: -52px;">
+                                    <span id="vaild-pass" style="display: flex; margin-top: 15px;  margin-left: 35px; color: red; text-align: center;" ></span>
+                                    <script>
+                                        function formvalid() {
+                                            var validPass = document.getElementById("pass").value;
+                                
+                                            // Check for password length
+                                            if (validPass.length < 8 || validPass.length > 20) {
+                                                document.getElementById("vaild-pass").innerHTML = "Password must be between 8 and 20 characters";
+                                                return false;
+                                            } 
+                                            
+                                            // Check for password complexity (e.g., at least one uppercase letter, one lowercase letter, and one digit)
+                                            var regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
+                                            if (!regex.test(validPass)) {
+                                                document.getElementById("vaild-pass").innerHTML = "Password must contain at least One uppercase letter, One lowercase letter, and One digit";
+                                                return false;
+                                            }
+                                
+                                            document.getElementById("vaild-pass").innerHTML = "";
+                                            return true;
+                                        }
+                                
+                                        function show() {
+                                            var x = document.getElementById("pass");
+                                            if (x.type === "password") {
+                                                x.type = "text";
+                                                document.getElementById("showimg").src = "https://static.thenounproject.com/png/777494-200.png";
+                                            } else {
+                                                x.type = "password";
+                                                document.getElementById("showimg").src = "https://cdn2.iconfinder.com/data/icons/basic-ui-interface-v-2/32/hide-512.png";
+                                            }
+                                        }
+                                    </script>
+                                    <button>Sign up</button>
+                                </form>
+                            </div>
+                
+                            <div class="login">
+                                <form>
+                                    <label for="chk" aria-hidden="true" id="logintxt" style="font-family: Arial, Helvetica, sans-serif;">Login</label>
+                                    <input type="email" name="email" placeholder="Email or Username" required="">
+                                    <input type="password" name="pswd" placeholder="Password" required="">
+                                    <button>Login</button>
+                                </form>
+                            </div>
+                    </div>
                 </section>
+<!-- ______________________________________________________________________________________________________________________________________________________________ -->
 
                 <div class="waves-io" data-aos="fade-down">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" data-aos="fade-down" style="margin-top: 10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" data-aos="fade-down" style="margin-top: -10px;">
                         <path
                             fill="#573b1f"
                             fill-opacity="1"
@@ -374,7 +369,7 @@
                                         <input type="email" name="email" required="required" />
                                         <span>Email</span>
                                     </div>
-                                    <div class="inputBox">
+                                    <div class="inputBox" >
                                         <textarea required name="message"></textarea>
                                         <span>Type your Message...</span>
                                     </div>
@@ -410,8 +405,7 @@
                         }
                     });
                 </script>
-            </div>
-        </div>
+            
     </body>
 
     <script>
